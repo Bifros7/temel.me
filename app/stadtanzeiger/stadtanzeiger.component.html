@@ -6,8 +6,8 @@
 			</template>
 			<template md-tab-content>
 				<md-list>
-					<div *ngFor="let advertisement of _advertisements, let last = last">
-						<stadtanzeiger-advertisement [advertisementModel]="advertisement"></stadtanzeiger-advertisement>
+					<div *ngFor="let announcement of _announcements, let last = last">
+						<stadtanzeiger-announcement [announcementModel]="announcement"></stadtanzeiger-announcement>
 						<md-divider *ngIf="!last"></md-divider>
 					</div>
 				</md-list>
@@ -18,7 +18,7 @@
 				Anzeige aufgeben
 			</template>
 			<template md-tab-content>
-				<stadtanzeiger-advertisement-create></stadtanzeiger-advertisement-create>
+				<stadtanzeiger-announcement-create></stadtanzeiger-announcement-create>
 			</template>
 		</md-tab>
 		<md-tab>
