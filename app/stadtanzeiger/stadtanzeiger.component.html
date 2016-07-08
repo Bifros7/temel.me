@@ -1,0 +1,41 @@
+<md-card>
+	<md-tab-group>
+		<md-tab>
+			<template md-tab-label>
+				Anzeigen
+			</template>
+			<template md-tab-content>
+				<md-list>
+					<div *ngFor="let advertisement of _advertisements, let last = last">
+						<stadtanzeiger-advertisement [advertisementModel]="advertisement"></stadtanzeiger-advertisement>
+						<md-divider *ngIf="!last"></md-divider>
+					</div>
+				</md-list>
+			</template>
+		</md-tab>
+		<md-tab>
+			<template md-tab-label>
+				Anzeige aufgeben
+			</template>
+			<template md-tab-content>
+				<stadtanzeiger-advertisement-create></stadtanzeiger-advertisement-create>
+			</template>
+		</md-tab>
+		<md-tab>
+			<template md-tab-label>
+				Registrierung
+			</template>
+			<template md-tab-content>
+				<stadtanzeiger-register></stadtanzeiger-register>
+			</template>
+		</md-tab>
+		<md-tab>
+			<template md-tab-label>
+				Passwort zurücksetzen
+			</template>
+			<template md-tab-content>
+				<stadtanzeiger-passwordreset></stadtanzeiger-passwordreset>
+			</template>
+		</md-tab>
+	</md-tab-group>
+</md-card>

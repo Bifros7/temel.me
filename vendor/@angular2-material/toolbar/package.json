@@ -1,0 +1,90 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@angular2-material/toolbar@^2.0.0-alpha.6",
+        "scope": "@angular2-material",
+        "escapedName": "@angular2-material%2ftoolbar",
+        "name": "@angular2-material/toolbar",
+        "rawSpec": "^2.0.0-alpha.6",
+        "spec": ">=2.0.0-alpha.6 <3.0.0",
+        "type": "range"
+      },
+      "/home/ptemel/temel"
+    ]
+  ],
+  "_from": "@angular2-material/toolbar@>=2.0.0-alpha.6 <3.0.0",
+  "_id": "@angular2-material/toolbar@2.0.0-alpha.6",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@angular2-material/toolbar",
+  "_nodeVersion": "4.1.2",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/toolbar-2.0.0-alpha.6.tgz_1467300971850_0.6646599099040031"
+  },
+  "_npmUser": {
+    "name": "angular2-material",
+    "email": "angular-core+npm@google.com"
+  },
+  "_npmVersion": "3.8.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@angular2-material/toolbar@^2.0.0-alpha.6",
+    "scope": "@angular2-material",
+    "escapedName": "@angular2-material%2ftoolbar",
+    "name": "@angular2-material/toolbar",
+    "rawSpec": "^2.0.0-alpha.6",
+    "spec": ">=2.0.0-alpha.6 <3.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@angular2-material/toolbar/-/toolbar-2.0.0-alpha.6.tgz",
+  "_shasum": "8b0305d5fd19f508866d1a83457f2b3bae65633a",
+  "_shrinkwrap": null,
+  "_spec": "@angular2-material/toolbar@^2.0.0-alpha.6",
+  "_where": "/home/ptemel/temel",
+  "bugs": {
+    "url": "https://github.com/angular/material2/issues"
+  },
+  "dependencies": {},
+  "description": "Angular 2 Material toolbar",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "8b0305d5fd19f508866d1a83457f2b3bae65633a",
+    "tarball": "https://registry.npmjs.org/@angular2-material/toolbar/-/toolbar-2.0.0-alpha.6.tgz"
+  },
+  "homepage": "https://github.com/angular/material2#readme",
+  "keywords": [
+    "angular",
+    "material",
+    "material design",
+    "components",
+    "toolbar",
+    "header"
+  ],
+  "license": "MIT",
+  "main": "./toolbar.js",
+  "maintainers": [
+    {
+      "name": "angular2-material",
+      "email": "angular-core+npm@google.com"
+    }
+  ],
+  "name": "@angular2-material/toolbar",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "@angular2-material/core": "2.0.0-alpha.6"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/material2.git"
+  },
+  "scripts": {},
+  "typings": "./toolbar.d.ts",
+  "version": "2.0.0-alpha.6"
+}

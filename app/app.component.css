@@ -1,0 +1,20 @@
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.secondary {
+	color: rgba(0,0,0,0.54);
+}
+
+md-sidenav-layout {
+	background: rgba(0,0,0,0.03);
+}
+
+.app-content {
+	margin: 20px;
+}
+
+.app-sidenav {
+	min-width: 100px;
+}
