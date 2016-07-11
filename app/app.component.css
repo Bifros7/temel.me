@@ -18,3 +18,10 @@ md-sidenav-layout {
 .app-sidenav {
 	min-width: 100px;
 }
+
+[md-fab] {
+	position: absolute;
+	right: 3%;
+	top: 34px;
+	z-index: 1;
+}

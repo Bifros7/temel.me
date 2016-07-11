@@ -10,7 +10,7 @@
         "spec": ">=2.0.0-alpha.6 <3.0.0",
         "type": "range"
       },
-      "/home/ptemel/temel"
+      "/home/ptemel/temel.me"
     ]
   ],
   "_from": "@angular2-material/card@>=2.0.0-alpha.6 <3.0.0",
@@ -45,7 +45,7 @@
   "_shasum": "58f9e195f2a06c549cca884ed0b2657ff3d38cb4",
   "_shrinkwrap": null,
   "_spec": "@angular2-material/card@^2.0.0-alpha.6",
-  "_where": "/home/ptemel/temel",
+  "_where": "/home/ptemel/temel.me",
   "bugs": {
     "url": "https://github.com/angular/material2/issues"
   },

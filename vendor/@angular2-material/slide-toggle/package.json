@@ -10,7 +10,7 @@
         "spec": ">=2.0.0-alpha.6 <3.0.0",
         "type": "range"
       },
-      "/home/ptemel/temel"
+      "/home/ptemel/temel.me"
     ]
   ],
   "_from": "@angular2-material/slide-toggle@>=2.0.0-alpha.6 <3.0.0",
@@ -45,7 +45,7 @@
   "_shasum": "fc0d2aa9ecdfaf9b3539cd06b3e82488e1249a28",
   "_shrinkwrap": null,
   "_spec": "@angular2-material/slide-toggle@^2.0.0-alpha.6",
-  "_where": "/home/ptemel/temel",
+  "_where": "/home/ptemel/temel.me",
   "bugs": {
     "url": "https://github.com/angular/material2/issues"
   },
