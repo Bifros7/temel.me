@@ -1,5 +1,5 @@
 <div layout="column" class="md-inline-form">
-	<form (submit)="_createAnnouncement(form)" #form="ngForm">
+	<form (ngSubmit)="_createAnnouncement(form)" #form="ngForm">
 		<md-input class="full-width" required placeholder="Titel" [(ngModel)]="_createModel.title" name="title"></md-input>
 		<md-input class="full-width" required placeholder="Straße" [(ngModel)]="_createModel.street" name="street"></md-input>
 		<table class="full-width" cellspacing="0"><tr>
