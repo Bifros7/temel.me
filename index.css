@@ -19,6 +19,7 @@ body {
 	position: fixed;
 	transition: opacity .8s ease-in-out;
 	width: 100%;
+	z-index: -1;
 }
 
 app-root:empty + .loading {
