@@ -9,8 +9,19 @@ export declare class MdProgressCircle implements OnDestroy {
     private _lastAnimationId;
     /** The id of the indeterminate interval. */
     private _interdeterminateInterval;
+    /**
+     * Values for aria max and min are only defined as numbers when in a determinate mode.  We do this
+     * because voiceover does not report the progress indicator as indeterminate if the aria min
+     * and/or max value are number values.
+     */
+    _ariaValueMin: number;
+    _ariaValueMax: number;
+    /** TODO: internal */
+    /** TODO: internal */
+    interdeterminateInterval: number;
     /** The current path value, representing the progres circle. */
     private _currentPath;
+    /** TODO: internal */
     currentPath: string;
     /** Clean up any animations that were running. */
     ngOnDestroy(): void;

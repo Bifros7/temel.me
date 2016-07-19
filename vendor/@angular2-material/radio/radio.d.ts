@@ -1,4 +1,4 @@
-import { AfterContentInit, EventEmitter, OnInit, Provider } from '@angular/core';
+import { AfterContentInit, EventEmitter, OnInit, QueryList } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
 import { MdUniqueSelectionDispatcher } from '@angular2-material/core/coordination/unique-selection-dispatcher';
 export { MdUniqueSelectionDispatcher } from '@angular2-material/core/coordination/unique-selection-dispatcher';
@@ -6,7 +6,7 @@ export { MdUniqueSelectionDispatcher } from '@angular2-material/core/coordinatio
  * Provider Expression that allows md-radio-group to register as a ControlValueAccessor. This
  * allows it to support [(ngModel)] and ngControl.
  */
-export declare const MD_RADIO_GROUP_CONTROL_VALUE_ACCESSOR: Provider;
+export declare const MD_RADIO_GROUP_CONTROL_VALUE_ACCESSOR: any;
 /** A simple change event emitted by either MdRadioButton or MdRadioGroup. */
 export declare class MdRadioChange {
     source: MdRadioButton;
@@ -35,7 +35,7 @@ export declare class MdRadioGroup implements AfterContentInit, ControlValueAcces
     /** Event emitted when the group value changes. */
     change: EventEmitter<MdRadioChange>;
     /** Child radio buttons. */
-    private _radios;
+    _radios: QueryList<MdRadioButton>;
     name: string;
     align: 'start' | 'end';
     disabled: boolean;
@@ -47,6 +47,11 @@ export declare class MdRadioGroup implements AfterContentInit, ControlValueAcces
      * TODO: internal
      */
     ngAfterContentInit(): void;
+    /**
+     * Mark this group as being "touched" (for ngModel). Meant to be called by the contained
+     * radio buttons upon their blur.
+     */
+    _touch(): void;
     private _updateRadioButtonNames();
     /** Updates the `selected` radio button from the internal _value state. */
     private _updateSelectedRadioFromValue();
@@ -70,7 +75,7 @@ export declare class MdRadioGroup implements AfterContentInit, ControlValueAcces
 }
 export declare class MdRadioButton implements OnInit {
     radioDispatcher: MdUniqueSelectionDispatcher;
-    private _isFocused;
+    _isFocused: boolean;
     /** Whether this radio is checked. */
     private _checked;
     /** The unique ID for the radio button. */
@@ -101,5 +106,17 @@ export declare class MdRadioButton implements OnInit {
     ngOnInit(): void;
     /** Dispatch change event with current value. */
     private _emitChangeEvent();
+    _onClick(event: Event): void;
+    /**
+     * We use a hidden native input field to handle changes to focus state via keyboard navigation,
+     * with visual rendering done separately. The native element is kept in sync with the overall
+     * state of the component.
+     */
+    _onInputFocus(): void;
+    _onInputBlur(): void;
+    /**
+     * Checks the radio due to an interaction with the underlying native <input type="radio">
+     */
+    _onInputChange(event: Event): void;
 }
 export declare const MD_RADIO_DIRECTIVES: (typeof MdRadioGroup | typeof MdRadioButton)[];

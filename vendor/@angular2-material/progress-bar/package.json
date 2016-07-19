@@ -2,49 +2,50 @@
   "_args": [
     [
       {
-        "raw": "@angular2-material/progress-bar@^2.0.0-alpha.6",
+        "raw": "@angular2-material/progress-bar@2.0.0-alpha.6-2",
         "scope": "@angular2-material",
         "escapedName": "@angular2-material%2fprogress-bar",
         "name": "@angular2-material/progress-bar",
-        "rawSpec": "^2.0.0-alpha.6",
-        "spec": ">=2.0.0-alpha.6 <3.0.0",
-        "type": "range"
+        "rawSpec": "2.0.0-alpha.6-2",
+        "spec": "2.0.0-alpha.6-2",
+        "type": "version"
       },
       "/home/ptemel/temel.me"
     ]
   ],
-  "_from": "@angular2-material/progress-bar@>=2.0.0-alpha.6 <3.0.0",
-  "_id": "@angular2-material/progress-bar@2.0.0-alpha.6",
+  "_from": "@angular2-material/progress-bar@2.0.0-alpha.6-2",
+  "_id": "@angular2-material/progress-bar@2.0.0-alpha.6-2",
   "_inCache": true,
   "_installable": true,
   "_location": "/@angular2-material/progress-bar",
-  "_nodeVersion": "4.1.2",
+  "_nodeVersion": "5.7.0",
   "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/progress-bar-2.0.0-alpha.6.tgz_1467300955790_0.80135542107746"
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/progress-bar-2.0.0-alpha.6-2.tgz_1468378880220_0.31309660244733095"
   },
   "_npmUser": {
     "name": "angular2-material",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.8.7",
+  "_npmVersion": "3.7.5",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular2-material/progress-bar@^2.0.0-alpha.6",
+    "raw": "@angular2-material/progress-bar@2.0.0-alpha.6-2",
     "scope": "@angular2-material",
     "escapedName": "@angular2-material%2fprogress-bar",
     "name": "@angular2-material/progress-bar",
-    "rawSpec": "^2.0.0-alpha.6",
-    "spec": ">=2.0.0-alpha.6 <3.0.0",
-    "type": "range"
+    "rawSpec": "2.0.0-alpha.6-2",
+    "spec": "2.0.0-alpha.6-2",
+    "type": "version"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular2-material/progress-bar/-/progress-bar-2.0.0-alpha.6.tgz",
-  "_shasum": "537ab94d5180f8944872f1aaf706ceb17a0a9218",
+  "_resolved": "https://registry.npmjs.org/@angular2-material/progress-bar/-/progress-bar-2.0.0-alpha.6-2.tgz",
+  "_shasum": "74e1045eed9b75219e3170ee088fcb569a25bba1",
   "_shrinkwrap": null,
-  "_spec": "@angular2-material/progress-bar@^2.0.0-alpha.6",
+  "_spec": "@angular2-material/progress-bar@2.0.0-alpha.6-2",
   "_where": "/home/ptemel/temel.me",
   "bugs": {
     "url": "https://github.com/angular/material2/issues"
@@ -54,8 +55,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "537ab94d5180f8944872f1aaf706ceb17a0a9218",
-    "tarball": "https://registry.npmjs.org/@angular2-material/progress-bar/-/progress-bar-2.0.0-alpha.6.tgz"
+    "shasum": "74e1045eed9b75219e3170ee088fcb569a25bba1",
+    "tarball": "https://registry.npmjs.org/@angular2-material/progress-bar/-/progress-bar-2.0.0-alpha.6-2.tgz"
   },
   "homepage": "https://github.com/angular/material2#readme",
   "keywords": [
@@ -78,7 +79,7 @@
   "name": "@angular2-material/progress-bar",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular2-material/core": "2.0.0-alpha.6"
+    "@angular2-material/core": "2.0.0-alpha.6-2"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -87,5 +88,5 @@
   },
   "scripts": {},
   "typings": "./progress-bar.d.ts",
-  "version": "2.0.0-alpha.6"
+  "version": "2.0.0-alpha.6-2"
 }

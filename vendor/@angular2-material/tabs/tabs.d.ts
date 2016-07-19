@@ -1,6 +1,8 @@
-import { NgZone } from '@angular/core';
+import { NgZone, QueryList } from '@angular/core';
 import { MdTabLabel } from './tab-label';
 import { MdTabContent } from './tab-content';
+import { MdTabLabelWrapper } from './tab-label-wrapper';
+import { MdInkBar } from './ink-bar';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 /** A simple change event emitted on focus or selection changes. */
@@ -19,8 +21,9 @@ export declare class MdTab {
  */
 export declare class MdTabGroup {
     private _zone;
-    private _labelWrappers;
-    private _inkBar;
+    _tabs: QueryList<MdTab>;
+    _labelWrappers: QueryList<MdTabLabelWrapper>;
+    _inkBar: QueryList<MdInkBar>;
     private _isInitialized;
     private _selectedIndex;
     selectedIndex: number;
@@ -50,6 +53,11 @@ export declare class MdTabGroup {
     /** When the focus index is set, we must manually send focus to the correct label */
     focusIndex: number;
     private _createChangeEvent(index);
+    /** Returns a unique id for each tab label element */
+    _getTabLabelId(i: number): string;
+    /** Returns a unique id for each tab content element */
+    _getTabContentId(i: number): string;
+    handleKeydown(event: KeyboardEvent): void;
     /** Increment the focus index by 1; prevent going over the number of tabs */
     focusNextTab(): void;
     /** Decrement the focus index by 1; prevent going below 0 */

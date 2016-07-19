@@ -2,49 +2,50 @@
   "_args": [
     [
       {
-        "raw": "@angular2-material/grid-list@^2.0.0-alpha.6",
+        "raw": "@angular2-material/grid-list@2.0.0-alpha.6-2",
         "scope": "@angular2-material",
         "escapedName": "@angular2-material%2fgrid-list",
         "name": "@angular2-material/grid-list",
-        "rawSpec": "^2.0.0-alpha.6",
-        "spec": ">=2.0.0-alpha.6 <3.0.0",
-        "type": "range"
+        "rawSpec": "2.0.0-alpha.6-2",
+        "spec": "2.0.0-alpha.6-2",
+        "type": "version"
       },
       "/home/ptemel/temel.me"
     ]
   ],
-  "_from": "@angular2-material/grid-list@>=2.0.0-alpha.6 <3.0.0",
-  "_id": "@angular2-material/grid-list@2.0.0-alpha.6",
+  "_from": "@angular2-material/grid-list@2.0.0-alpha.6-2",
+  "_id": "@angular2-material/grid-list@2.0.0-alpha.6-2",
   "_inCache": true,
   "_installable": true,
   "_location": "/@angular2-material/grid-list",
-  "_nodeVersion": "4.1.2",
+  "_nodeVersion": "5.7.0",
   "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/grid-list-2.0.0-alpha.6.tgz_1467300940831_0.6317952468525618"
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/grid-list-2.0.0-alpha.6-2.tgz_1468378854779_0.5915876743383706"
   },
   "_npmUser": {
     "name": "angular2-material",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.8.7",
+  "_npmVersion": "3.7.5",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular2-material/grid-list@^2.0.0-alpha.6",
+    "raw": "@angular2-material/grid-list@2.0.0-alpha.6-2",
     "scope": "@angular2-material",
     "escapedName": "@angular2-material%2fgrid-list",
     "name": "@angular2-material/grid-list",
-    "rawSpec": "^2.0.0-alpha.6",
-    "spec": ">=2.0.0-alpha.6 <3.0.0",
-    "type": "range"
+    "rawSpec": "2.0.0-alpha.6-2",
+    "spec": "2.0.0-alpha.6-2",
+    "type": "version"
   },
   "_requiredBy": [
+    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular2-material/grid-list/-/grid-list-2.0.0-alpha.6.tgz",
-  "_shasum": "b87bf49f5d609597bef89872175e3c05bb021bde",
+  "_resolved": "https://registry.npmjs.org/@angular2-material/grid-list/-/grid-list-2.0.0-alpha.6-2.tgz",
+  "_shasum": "13925c6a807e9b17cc8615d61423e7a020f56ab6",
   "_shrinkwrap": null,
-  "_spec": "@angular2-material/grid-list@^2.0.0-alpha.6",
+  "_spec": "@angular2-material/grid-list@2.0.0-alpha.6-2",
   "_where": "/home/ptemel/temel.me",
   "bugs": {
     "url": "https://github.com/angular/material2/issues"
@@ -54,8 +55,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "b87bf49f5d609597bef89872175e3c05bb021bde",
-    "tarball": "https://registry.npmjs.org/@angular2-material/grid-list/-/grid-list-2.0.0-alpha.6.tgz"
+    "shasum": "13925c6a807e9b17cc8615d61423e7a020f56ab6",
+    "tarball": "https://registry.npmjs.org/@angular2-material/grid-list/-/grid-list-2.0.0-alpha.6-2.tgz"
   },
   "homepage": "https://github.com/angular/material2#readme",
   "keywords": [
@@ -78,7 +79,7 @@
   "name": "@angular2-material/grid-list",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular2-material/core": "2.0.0-alpha.6"
+    "@angular2-material/core": "2.0.0-alpha.6-2"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -87,5 +88,5 @@
   },
   "scripts": {},
   "typings": "./grid-list.d.ts",
-  "version": "2.0.0-alpha.6"
+  "version": "2.0.0-alpha.6-2"
 }

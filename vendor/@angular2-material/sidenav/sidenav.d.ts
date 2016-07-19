@@ -1,4 +1,4 @@
-import { AfterContentInit, ElementRef, EventEmitter, Renderer } from '@angular/core';
+import { AfterContentInit, ElementRef, QueryList, EventEmitter, Renderer } from '@angular/core';
 import { Dir } from '@angular2-material/core/rtl/dir';
 import { MdError } from '@angular2-material/core/errors/error';
 /** Exception thrown when two MdSidenav are matching the same side. */
@@ -52,14 +52,22 @@ export declare class MdSidenav {
      * @param isOpen
      */
     toggle(isOpen?: boolean): Promise<void>;
-    private _isClosing;
-    private _isOpening;
-    private _isClosed;
-    private _isOpened;
-    private _isEnd;
-    private _modeSide;
-    private _modeOver;
-    private _modePush;
+    /**
+     * When transition has finished, set the internal state for classes and emit the proper event.
+     * The event passed is actually of type TransitionEvent, but that type is not available in
+     * Android so we use any.
+     */
+    _onTransitionEnd(transitionEvent: TransitionEvent): void;
+    _isClosing: boolean;
+    _isOpening: boolean;
+    _isClosed: boolean;
+    _isOpened: boolean;
+    _isEnd: boolean;
+    _modeSide: boolean;
+    _modeOver: boolean;
+    _modePush: boolean;
+    /** TODO: internal (needed by MdSidenavLayout). */
+    _width: any;
     private _transition;
     private _openPromise;
     private _openPromiseResolve;
@@ -78,7 +86,7 @@ export declare class MdSidenavLayout implements AfterContentInit {
     private _dir;
     private _element;
     private _renderer;
-    private _sidenavs;
+    _sidenavs: QueryList<MdSidenav>;
     start: MdSidenav;
     end: MdSidenav;
     /** The sidenav at the start/end alignment, independent of direction. */
@@ -95,9 +103,12 @@ export declare class MdSidenavLayout implements AfterContentInit {
     constructor(_dir: Dir, _element: ElementRef, _renderer: Renderer);
     /** TODO: internal */
     ngAfterContentInit(): void;
+    private _watchSidenavToggle(sidenav);
     private _setLayoutClass(sidenav, bool);
     /** Validate the state of the sidenav children components. */
     private _validateDrawers();
+    _closeModalSidenav(): void;
+    _isShowingBackdrop(): boolean;
     private _isSidenavOpen(side);
     /**
      * Return the width of the sidenav, if it's in the proper mode and opened.
@@ -106,5 +117,24 @@ export declare class MdSidenavLayout implements AfterContentInit {
      * @param mode
      */
     private _getSidenavEffectiveWidth(sidenav, mode);
+    _getMarginLeft(): number;
+    _getMarginRight(): number;
+    _getPositionLeft(): number;
+    _getPositionRight(): number;
+    /**
+     * Returns the horizontal offset for the content area.  There should never be a value for both
+     * left and right, so by subtracting the right value from the left value, we should always get
+     * the appropriate offset.
+     */
+    _getPositionOffset(): number;
+    /**
+     * This is using [ngStyle] rather than separate [style...] properties because [style.transform]
+     * doesn't seem to work right now.
+     */
+    _getStyles(): {
+        marginLeft: string;
+        marginRight: string;
+        transform: string;
+    };
 }
 export declare const MD_SIDENAV_DIRECTIVES: (typeof MdSidenavLayout | typeof MdSidenav)[];

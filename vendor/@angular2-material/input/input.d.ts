@@ -1,8 +1,8 @@
-import { Provider, AfterContentInit, SimpleChange, OnChanges } from '@angular/core';
+import { AfterContentInit, SimpleChange, ElementRef, QueryList, OnChanges } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
 import { MdError } from '@angular2-material/core/errors/error';
 import { Observable } from 'rxjs/Observable';
-export declare const MD_INPUT_CONTROL_VALUE_ACCESSOR: Provider;
+export declare const MD_INPUT_CONTROL_VALUE_ACCESSOR: any;
 export declare class MdInputPlaceholderConflictError extends MdError {
     constructor();
 }
@@ -44,8 +44,8 @@ export declare class MdInput implements ControlValueAccessor, AfterContentInit, 
     /**
      * Content directives.
      */
-    private _placeholderChild;
-    private _hintChildren;
+    _placeholderChild: MdPlaceholder;
+    _hintChildren: QueryList<MdHint>;
     /** Readonly properties. */
     focused: boolean;
     empty: boolean;
@@ -63,9 +63,9 @@ export declare class MdInput implements ControlValueAccessor, AfterContentInit, 
     disabled: boolean;
     id: string;
     list: string;
-    max: string;
+    max: string | number;
     maxLength: number;
-    min: string;
+    min: string | number;
     minLength: number;
     placeholder: string;
     readOnly: boolean;
@@ -80,10 +80,14 @@ export declare class MdInput implements ControlValueAccessor, AfterContentInit, 
     onBlur: Observable<FocusEvent>;
     onFocus: Observable<FocusEvent>;
     value: any;
-    private _align;
-    private _inputElement;
+    _align: any;
+    _inputElement: ElementRef;
     /** Set focus on input */
     focus(): void;
+    _handleFocus(event: FocusEvent): void;
+    _handleBlur(event: FocusEvent): void;
+    _handleChange(event: Event): void;
+    _hasPlaceholder(): boolean;
     /**
      * Implemented as part of ControlValueAccessor.
      * TODO: internal

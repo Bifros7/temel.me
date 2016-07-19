@@ -1,4 +1,5 @@
-import { AfterContentChecked, OnInit, Renderer, ElementRef } from '@angular/core';
+import { AfterContentChecked, OnInit, QueryList, Renderer, ElementRef } from '@angular/core';
+import { MdGridTile } from './grid-tile';
 import { Dir } from '@angular2-material/core/rtl/dir';
 export declare class MdGridList implements OnInit, AfterContentChecked {
     private _renderer;
@@ -18,7 +19,7 @@ export declare class MdGridList implements OnInit, AfterContentChecked {
     /** Sets position and size styles for a tile */
     private _tileStyler;
     /** Query list of tiles that are being rendered. */
-    private _tiles;
+    _tiles: QueryList<MdGridTile>;
     constructor(_renderer: Renderer, _element: ElementRef, _dir: Dir);
     cols: any;
     gutterSize: any;
@@ -40,5 +41,7 @@ export declare class MdGridList implements OnInit, AfterContentChecked {
     private _setTileStyler();
     /** Computes and applies the size and position for all children grid tiles. */
     private _layoutTiles();
+    /** Sets style on the main grid-list element, given the style name and value. */
+    _setListStyle(style: [string, string]): void;
 }
 export declare const MD_GRID_LIST_DIRECTIVES: any[];

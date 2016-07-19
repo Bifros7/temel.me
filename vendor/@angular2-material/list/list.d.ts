@@ -1,5 +1,5 @@
 import { QueryList, ElementRef, Renderer, AfterContentInit } from '@angular/core';
-import { MdLine, MdLineSetter } from '@angular2-material/core/line/line';
+import { MdLine } from '@angular2-material/core/line/line';
 export declare class MdList {
 }
 export declare class MdListAvatar {
@@ -7,11 +7,14 @@ export declare class MdListAvatar {
 export declare class MdListItem implements AfterContentInit {
     private _renderer;
     private _element;
-    _lineSetter: MdLineSetter;
+    _hasFocus: boolean;
+    private _lineSetter;
     _lines: QueryList<MdLine>;
-    private _hasAvatar;
+    _hasAvatar: MdListAvatar;
     constructor(_renderer: Renderer, _element: ElementRef);
     /** TODO: internal */
     ngAfterContentInit(): void;
+    _handleFocus(): void;
+    _handleBlur(): void;
 }
 export declare const MD_LIST_DIRECTIVES: (typeof MdList | typeof MdListItem)[];
