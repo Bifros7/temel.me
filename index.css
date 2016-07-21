@@ -3,7 +3,7 @@
 		transform: rotate(0deg);
 	}
 	100% {
-		transform: rotate(360deg);
+		transform: rotate(359deg);
 	}
 }
 
@@ -33,7 +33,8 @@ app-root:empty + .loading i {
 	font-size: 5em;
 	position: absolute;
 	text-align: center;
-	top: 50%;
+	/*top = 50% - font-size divided by 2*/
+	top: calc(50% - 40px);
 	transform: translate(0, -50%);
 	width: 100%;
 }
