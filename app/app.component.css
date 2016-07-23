@@ -11,6 +11,10 @@ md-sidenav-layout {
 	background: rgba(0,0,0,0.03);
 }
 
+md-nav-list {
+	padding-top: 0px;
+}
+
 .app-content {
 	margin: 20px;
 }

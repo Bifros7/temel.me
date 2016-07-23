@@ -6,7 +6,16 @@
 					Maps
 				</template>
 				<template md-tab-content>
-					WIP
+					<md-tab-group>
+						<md-tab *ngFor="let map of _maps">
+							<template md-tab-label>
+								{{map.name}}
+							</template>
+							<template md-tab-content>
+								<pokemongo-map [mapModel]="map"></pokemongo-map>
+							</template>
+						</md-tab>
+					</md-tab-group>
 				</template>
 			</md-tab>
 			<md-tab>

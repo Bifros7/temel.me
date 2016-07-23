@@ -6,17 +6,17 @@
 <div layout="column" class="md-inline-form">
 	<form (ngSubmit)="_registerUser(form)" #form="ngForm">
 		<table class="full-width" cellspacing="0"><tr>
-			<td><md-input class="full-width" required placeholder="Vorname" [(ngModel)]="_userModel.firstName" name="firstName"></md-input></td>
-			<td><md-input class="full-width" required placeholder="Nachname" [(ngModel)]="_userModel.lastName" name="lastName"></md-input></td>
+			<td><md-input class="full-width" required placeholder="Name" [(ngModel)]="_userModel.firstName" name="firstName"></md-input></td>
+			<td><md-input class="full-width" required placeholder="Surname" [(ngModel)]="_userModel.lastName" name="lastName"></md-input></td>
 		</tr></table>
-		<md-input class="full-width" required placeholder="Straße" [(ngModel)]="_userModel.street" name="street"></md-input>
+		<md-input class="full-width" required placeholder="Street" [(ngModel)]="_userModel.street" name="street"></md-input>
 		<table class="full-width" cellspacing="0"><tr>
-			<td><md-input class="full-width" required placeholder="Ort" [(ngModel)]="_userModel.town" name="town"></md-input></td>
-			<td><md-input class="full-width" required placeholder="PLZ" maxLength="5" [(ngModel)]="_userModel.zipCode" name="zipCode"></md-input></td>
+			<td><md-input class="full-width" required placeholder="Town" [(ngModel)]="_userModel.town" name="town"></md-input></td>
+			<td><md-input class="full-width" required placeholder="Zip" maxLength="5" [(ngModel)]="_userModel.zipCode" name="zipCode"></md-input></td>
 		</tr></table>
 		<table class="full-width" cellspacing="0"><tr>
 			<td><md-input class="full-width" type="email" required placeholder="E-Mail" [(ngModel)]="_userModel.email" name="email"></md-input></td>
-			<td><md-input class="full-width" type="password" required placeholder="Passwort" [(ngModel)]="_userModel.password" name="password"></md-input></td>
+			<td><md-input class="full-width" type="password" required placeholder="Password" [(ngModel)]="_userModel.password" name="password"></md-input></td>
 		</tr></table>
 		<div class="bottom-right">
 			<button md-raised-button type="reset">Reset</button>
