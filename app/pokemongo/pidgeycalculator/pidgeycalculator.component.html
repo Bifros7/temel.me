@@ -1,11 +1,12 @@
 <div layout="column" class="md-inline-form">
 	<form (ngSubmit)="_calculateValues(form)" #form="ngForm">
-		<table class="full-width" cellspacing="0"><tr>
-			<td><md-input class="full-width" required placeholder="Candy" [(ngModel)]="_pidgeycalculatorModel.candy" name="candy"></md-input></td>
-			<td><md-input class="full-width" required placeholder="Pokemon to evolve" [(ngModel)]="_pidgeycalculatorModel.pokemonToEvolve" name="pokemonToEvolve"></md-input></td>
-			<td><md-input class="full-width" required placeholder="Seconds per evolution" [(ngModel)]="_pidgeycalculatorModel.secondsPerEvolution" name="secondsPerEvolution"></md-input></td>
-		</tr></table>
-		<div class="bottom-right">
+		<md-input class="full-width" required placeholder="Candy" [(ngModel)]="_pidgeycalculatorModel.candy" name="candy"></md-input>
+		<md-input class="full-width" required placeholder="12-candy Pokemon available" [(ngModel)]="_pidgeycalculatorModel.pokemonToEvolve" name="pokemonToEvolve"></md-input>
+		<md-input class="full-width" required placeholder="Seconds per evolution" [(ngModel)]="_pidgeycalculatorModel.secondsPerEvolution" name="secondsPerEvolution"></md-input>
+		<md-checkbox [(ngModel)]="_pidgeycalculatorModel.transferAfterEvolution" name="transferAfterEvolution">Transfer after evolution</md-checkbox>
+		<div *ngIf="_showResult">
+		</div>
+		<div class="float-right">
 			<button md-raised-button type="reset">Reset</button>
 			<button md-raised-button color="primary" type="submit">Calculate</button>
 		</div>

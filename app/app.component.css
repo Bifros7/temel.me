@@ -1,10 +1,55 @@
-* {
+:host >>> * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.secondary {
+:host >>> .secondary {
 	color: rgba(0,0,0,0.54);
+}
+
+:host >>> md-card {
+	padding: 0px;
+}
+
+:host >>> .md-tab-header {
+	background-color: #009688;
+	color: white;
+}
+
+:host >>> .md-tab-header > md-ink-bar {
+	background-color: white;
+}
+
+:host >>> .md-tab-body.md-active {
+	padding: 14px;
+}
+
+:host >>> .full-width {
+	width: 100%;
+}
+
+:host >>> .float-right {
+	float: right;
+}
+
+:host >>> md-card.success {
+	background-color: #59B75C;
+	color: rgba(255,255,255, 0.84);
+}
+
+:host >>> md-card.info {
+	background-color: #03A9F4;
+	color: rgba(255,255,255, 0.84);
+}
+
+:host >>> md-card.warning {
+	background-color: #FF5722;
+	color: rgba(255,255,255, 0.84);
+}
+
+:host >>> md-card.danger {
+	background-color: #F44336;
+	color: rgba(255,255,255, 0.84);
 }
 
 md-sidenav-layout {
