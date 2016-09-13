@@ -2,50 +2,48 @@
   "_args": [
     [
       {
-        "raw": "@angular2-material/toolbar@2.0.0-alpha.6-2",
+        "raw": "@angular2-material/toolbar@2.0.0-alpha.6",
         "scope": "@angular2-material",
         "escapedName": "@angular2-material%2ftoolbar",
         "name": "@angular2-material/toolbar",
-        "rawSpec": "2.0.0-alpha.6-2",
-        "spec": "2.0.0-alpha.6-2",
+        "rawSpec": "2.0.0-alpha.6",
+        "spec": "2.0.0-alpha.6",
         "type": "version"
       },
       "/home/ptemel/temel.me"
     ]
   ],
-  "_from": "@angular2-material/toolbar@2.0.0-alpha.6-2",
-  "_id": "@angular2-material/toolbar@2.0.0-alpha.6-2",
+  "_from": "@angular2-material/toolbar@2.0.0-alpha.6",
+  "_id": "@angular2-material/toolbar@2.0.0-alpha.6",
   "_inCache": true,
-  "_installable": true,
   "_location": "/@angular2-material/toolbar",
-  "_nodeVersion": "5.7.0",
+  "_nodeVersion": "4.1.2",
   "_npmOperationalInternal": {
     "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/toolbar-2.0.0-alpha.6-2.tgz_1468378908434_0.2633876802865416"
+    "tmp": "tmp/toolbar-2.0.0-alpha.6.tgz_1467300971850_0.6646599099040031"
   },
   "_npmUser": {
     "name": "angular2-material",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.7.5",
+  "_npmVersion": "3.8.7",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular2-material/toolbar@2.0.0-alpha.6-2",
+    "raw": "@angular2-material/toolbar@2.0.0-alpha.6",
     "scope": "@angular2-material",
     "escapedName": "@angular2-material%2ftoolbar",
     "name": "@angular2-material/toolbar",
-    "rawSpec": "2.0.0-alpha.6-2",
-    "spec": "2.0.0-alpha.6-2",
+    "rawSpec": "2.0.0-alpha.6",
+    "spec": "2.0.0-alpha.6",
     "type": "version"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular2-material/toolbar/-/toolbar-2.0.0-alpha.6-2.tgz",
-  "_shasum": "fa02ca65f9ea0a8e0db5d1c5b0a96987f2b40299",
+  "_resolved": "https://registry.npmjs.org/@angular2-material/toolbar/-/toolbar-2.0.0-alpha.6.tgz",
+  "_shasum": "8b0305d5fd19f508866d1a83457f2b3bae65633a",
   "_shrinkwrap": null,
-  "_spec": "@angular2-material/toolbar@2.0.0-alpha.6-2",
+  "_spec": "@angular2-material/toolbar@2.0.0-alpha.6",
   "_where": "/home/ptemel/temel.me",
   "bugs": {
     "url": "https://github.com/angular/material2/issues"
@@ -55,8 +53,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "fa02ca65f9ea0a8e0db5d1c5b0a96987f2b40299",
-    "tarball": "https://registry.npmjs.org/@angular2-material/toolbar/-/toolbar-2.0.0-alpha.6-2.tgz"
+    "shasum": "8b0305d5fd19f508866d1a83457f2b3bae65633a",
+    "tarball": "https://registry.npmjs.org/@angular2-material/toolbar/-/toolbar-2.0.0-alpha.6.tgz"
   },
   "homepage": "https://github.com/angular/material2#readme",
   "keywords": [
@@ -78,7 +76,7 @@
   "name": "@angular2-material/toolbar",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular2-material/core": "2.0.0-alpha.6-2"
+    "@angular2-material/core": "2.0.0-alpha.6"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -87,5 +85,5 @@
   },
   "scripts": {},
   "typings": "./toolbar.d.ts",
-  "version": "2.0.0-alpha.6-2"
+  "version": "2.0.0-alpha.6"
 }

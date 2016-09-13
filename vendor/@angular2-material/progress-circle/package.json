@@ -2,50 +2,48 @@
   "_args": [
     [
       {
-        "raw": "@angular2-material/progress-circle@2.0.0-alpha.6-2",
+        "raw": "@angular2-material/progress-circle@2.0.0-alpha.6",
         "scope": "@angular2-material",
         "escapedName": "@angular2-material%2fprogress-circle",
         "name": "@angular2-material/progress-circle",
-        "rawSpec": "2.0.0-alpha.6-2",
-        "spec": "2.0.0-alpha.6-2",
+        "rawSpec": "2.0.0-alpha.6",
+        "spec": "2.0.0-alpha.6",
         "type": "version"
       },
       "/home/ptemel/temel.me"
     ]
   ],
-  "_from": "@angular2-material/progress-circle@2.0.0-alpha.6-2",
-  "_id": "@angular2-material/progress-circle@2.0.0-alpha.6-2",
+  "_from": "@angular2-material/progress-circle@2.0.0-alpha.6",
+  "_id": "@angular2-material/progress-circle@2.0.0-alpha.6",
   "_inCache": true,
-  "_installable": true,
   "_location": "/@angular2-material/progress-circle",
-  "_nodeVersion": "5.7.0",
+  "_nodeVersion": "4.1.2",
   "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/progress-circle-2.0.0-alpha.6-2.tgz_1468378885038_0.10451248660683632"
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/progress-circle-2.0.0-alpha.6.tgz_1467300960200_0.5371599032077938"
   },
   "_npmUser": {
     "name": "angular2-material",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.7.5",
+  "_npmVersion": "3.8.7",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular2-material/progress-circle@2.0.0-alpha.6-2",
+    "raw": "@angular2-material/progress-circle@2.0.0-alpha.6",
     "scope": "@angular2-material",
     "escapedName": "@angular2-material%2fprogress-circle",
     "name": "@angular2-material/progress-circle",
-    "rawSpec": "2.0.0-alpha.6-2",
-    "spec": "2.0.0-alpha.6-2",
+    "rawSpec": "2.0.0-alpha.6",
+    "spec": "2.0.0-alpha.6",
     "type": "version"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular2-material/progress-circle/-/progress-circle-2.0.0-alpha.6-2.tgz",
-  "_shasum": "756bbce8d0184b4e57bf6e9bbaf3e5f88a27d5bd",
+  "_resolved": "https://registry.npmjs.org/@angular2-material/progress-circle/-/progress-circle-2.0.0-alpha.6.tgz",
+  "_shasum": "54638d92e4a6e823be6db084c90ca4683c1da5be",
   "_shrinkwrap": null,
-  "_spec": "@angular2-material/progress-circle@2.0.0-alpha.6-2",
+  "_spec": "@angular2-material/progress-circle@2.0.0-alpha.6",
   "_where": "/home/ptemel/temel.me",
   "bugs": {
     "url": "https://github.com/angular/material2/issues"
@@ -55,8 +53,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "756bbce8d0184b4e57bf6e9bbaf3e5f88a27d5bd",
-    "tarball": "https://registry.npmjs.org/@angular2-material/progress-circle/-/progress-circle-2.0.0-alpha.6-2.tgz"
+    "shasum": "54638d92e4a6e823be6db084c90ca4683c1da5be",
+    "tarball": "https://registry.npmjs.org/@angular2-material/progress-circle/-/progress-circle-2.0.0-alpha.6.tgz"
   },
   "homepage": "https://github.com/angular/material2#readme",
   "keywords": [
@@ -78,7 +76,7 @@
   "name": "@angular2-material/progress-circle",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular2-material/core": "2.0.0-alpha.6-2"
+    "@angular2-material/core": "2.0.0-alpha.6"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -87,5 +85,5 @@
   },
   "scripts": {},
   "typings": "./progress-circle.d.ts",
-  "version": "2.0.0-alpha.6-2"
+  "version": "2.0.0-alpha.6"
 }

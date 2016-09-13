@@ -28,10 +28,10 @@
              [attr.tabindex]="tabIndex"
              [type]="type"
              [attr.name]="name"
-             (focus)="_handleFocus($event)"
-             (blur)="_handleBlur($event)"
+             (focus)="handleFocus($event)"
+             (blur)="handleBlur($event)"
              [(ngModel)]="value"
-             (change)="_handleChange($event)">
+             (change)="handleChange($event)">
 
       <label class="md-input-placeholder"
              [attr.for]="inputId"
@@ -40,7 +40,7 @@
              [class.md-float]="floatingPlaceholder"
              [class.md-accent]="dividerColor == 'accent'"
              [class.md-warn]="dividerColor == 'warn'"
-             *ngIf="_hasPlaceholder()">
+             *ngIf="hasPlaceholder()">
         <ng-content select="md-placeholder"></ng-content>
         {{placeholder}}
         <span class="md-placeholder-required" *ngIf="required">*</span>

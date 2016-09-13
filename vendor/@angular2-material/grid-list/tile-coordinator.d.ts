@@ -43,9 +43,3 @@ export declare class TileCoordinator {
     /** Update the tile tracker to account for the given tile in the given space. */
     private _markTilePosition(start, tile);
 }
-/** Simple data structure for tile position (row, col). */
-export declare class TilePosition {
-    row: number;
-    col: number;
-    constructor(row: number, col: number);
-}

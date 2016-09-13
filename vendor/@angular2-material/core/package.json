@@ -2,50 +2,48 @@
   "_args": [
     [
       {
-        "raw": "@angular2-material/core@2.0.0-alpha.6-2",
+        "raw": "@angular2-material/core@2.0.0-alpha.6",
         "scope": "@angular2-material",
         "escapedName": "@angular2-material%2fcore",
         "name": "@angular2-material/core",
-        "rawSpec": "2.0.0-alpha.6-2",
-        "spec": "2.0.0-alpha.6-2",
+        "rawSpec": "2.0.0-alpha.6",
+        "spec": "2.0.0-alpha.6",
         "type": "version"
       },
       "/home/ptemel/temel.me"
     ]
   ],
-  "_from": "@angular2-material/core@2.0.0-alpha.6-2",
-  "_id": "@angular2-material/core@2.0.0-alpha.6-2",
+  "_from": "@angular2-material/core@2.0.0-alpha.6",
+  "_id": "@angular2-material/core@2.0.0-alpha.6",
   "_inCache": true,
-  "_installable": true,
   "_location": "/@angular2-material/core",
-  "_nodeVersion": "5.7.0",
+  "_nodeVersion": "4.1.2",
   "_npmOperationalInternal": {
     "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/core-2.0.0-alpha.6-2.tgz_1468378849375_0.729686220176518"
+    "tmp": "tmp/core-2.0.0-alpha.6.tgz_1467300939016_0.8273107195273042"
   },
   "_npmUser": {
     "name": "angular2-material",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.7.5",
+  "_npmVersion": "3.8.7",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular2-material/core@2.0.0-alpha.6-2",
+    "raw": "@angular2-material/core@2.0.0-alpha.6",
     "scope": "@angular2-material",
     "escapedName": "@angular2-material%2fcore",
     "name": "@angular2-material/core",
-    "rawSpec": "2.0.0-alpha.6-2",
-    "spec": "2.0.0-alpha.6-2",
+    "rawSpec": "2.0.0-alpha.6",
+    "spec": "2.0.0-alpha.6",
     "type": "version"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular2-material/core/-/core-2.0.0-alpha.6-2.tgz",
-  "_shasum": "c46fc4e3d1eef32a3bd6051ac10afe408946a2f5",
+  "_resolved": "https://registry.npmjs.org/@angular2-material/core/-/core-2.0.0-alpha.6.tgz",
+  "_shasum": "ffa26578e8bcfd29c7c74ee6032b89b89fac6d08",
   "_shrinkwrap": null,
-  "_spec": "@angular2-material/core@2.0.0-alpha.6-2",
+  "_spec": "@angular2-material/core@2.0.0-alpha.6",
   "_where": "/home/ptemel/temel.me",
   "bugs": {
     "url": "https://github.com/angular/material2/issues"
@@ -55,8 +53,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "c46fc4e3d1eef32a3bd6051ac10afe408946a2f5",
-    "tarball": "https://registry.npmjs.org/@angular2-material/core/-/core-2.0.0-alpha.6-2.tgz"
+    "shasum": "ffa26578e8bcfd29c7c74ee6032b89b89fac6d08",
+    "tarball": "https://registry.npmjs.org/@angular2-material/core/-/core-2.0.0-alpha.6.tgz"
   },
   "homepage": "https://github.com/angular/material2#readme",
   "keywords": [
@@ -76,8 +74,8 @@
   "name": "@angular2-material/core",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular/core": "^2.0.0-rc.4",
-    "@angular/common": "^2.0.0-rc.4"
+    "@angular/core": "^2.0.0-rc.3",
+    "@angular/common": "^2.0.0-rc.3"
   },
   "readme": "ERROR: No README data found!",
   "repository": {
@@ -86,5 +84,5 @@
   },
   "scripts": {},
   "typings": "./core.d.ts",
-  "version": "2.0.0-alpha.6-2"
+  "version": "2.0.0-alpha.6"
 }

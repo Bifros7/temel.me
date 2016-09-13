@@ -16,16 +16,5 @@ export declare class MdProgressBar {
      * Mirrored to mode attribute.
      */
     mode: 'determinate' | 'indeterminate' | 'buffer' | 'query';
-    /** Gets the current transform value for the progress bar's primary indicator. */
-    _primaryTransform(): {
-        transform: string;
-    };
-    /**
-     * Gets the current transform value for the progress bar's buffer indicator.  Only used if the
-     * progress mode is set to buffer, otherwise returns an undefined, causing no transformation.
-     */
-    _bufferTransform(): {
-        transform: string;
-    };
 }
 export declare const MD_PROGRESS_BAR_DIRECTIVES: typeof MdProgressBar[];

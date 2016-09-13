@@ -30,16 +30,6 @@ export declare class MdSlideToggle implements AfterContentInit, ControlValueAcce
     /** TODO: internal */
     ngAfterContentInit(): void;
     /**
-     * The onChangeEvent method will be also called on click.
-     * This is because everything for the slide-toggle is wrapped inside of a label,
-     * which triggers a onChange event on click.
-     */
-    _onChangeEvent(event: Event): void;
-    _onInputClick(event: Event): void;
-    _setMousedown(): void;
-    _onInputFocus(): void;
-    _onInputBlur(): void;
-    /**
      * Implemented as part of ControlValueAccessor.
      * TODO: internal
      */

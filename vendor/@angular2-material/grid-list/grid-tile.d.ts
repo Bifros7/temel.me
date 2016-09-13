@@ -8,11 +8,6 @@ export declare class MdGridTile {
     constructor(_renderer: Renderer, _element: ElementRef);
     rowspan: number;
     colspan: number;
-    /**
-     * Sets the style of the grid-tile element.  Needs to be set manually to avoid
-     * "Changed after checked" errors that would occur with HostBinding.
-     */
-    _setStyle(property: string, value: string): void;
 }
 export declare class MdGridTileText implements AfterContentInit {
     private _renderer;

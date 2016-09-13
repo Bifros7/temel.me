@@ -2,50 +2,48 @@
   "_args": [
     [
       {
-        "raw": "@angular2-material/radio@2.0.0-alpha.6-2",
+        "raw": "@angular2-material/radio@2.0.0-alpha.6",
         "scope": "@angular2-material",
         "escapedName": "@angular2-material%2fradio",
         "name": "@angular2-material/radio",
-        "rawSpec": "2.0.0-alpha.6-2",
-        "spec": "2.0.0-alpha.6-2",
+        "rawSpec": "2.0.0-alpha.6",
+        "spec": "2.0.0-alpha.6",
         "type": "version"
       },
       "/home/ptemel/temel.me"
     ]
   ],
-  "_from": "@angular2-material/radio@2.0.0-alpha.6-2",
-  "_id": "@angular2-material/radio@2.0.0-alpha.6-2",
+  "_from": "@angular2-material/radio@2.0.0-alpha.6",
+  "_id": "@angular2-material/radio@2.0.0-alpha.6",
   "_inCache": true,
-  "_installable": true,
   "_location": "/@angular2-material/radio",
-  "_nodeVersion": "5.7.0",
+  "_nodeVersion": "4.1.2",
   "_npmOperationalInternal": {
     "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/radio-2.0.0-alpha.6-2.tgz_1468378889417_0.1922112146858126"
+    "tmp": "tmp/radio-2.0.0-alpha.6.tgz_1467300961907_0.6817858491558582"
   },
   "_npmUser": {
     "name": "angular2-material",
     "email": "angular-core+npm@google.com"
   },
-  "_npmVersion": "3.7.5",
+  "_npmVersion": "3.8.7",
   "_phantomChildren": {},
   "_requested": {
-    "raw": "@angular2-material/radio@2.0.0-alpha.6-2",
+    "raw": "@angular2-material/radio@2.0.0-alpha.6",
     "scope": "@angular2-material",
     "escapedName": "@angular2-material%2fradio",
     "name": "@angular2-material/radio",
-    "rawSpec": "2.0.0-alpha.6-2",
-    "spec": "2.0.0-alpha.6-2",
+    "rawSpec": "2.0.0-alpha.6",
+    "spec": "2.0.0-alpha.6",
     "type": "version"
   },
   "_requiredBy": [
-    "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/@angular2-material/radio/-/radio-2.0.0-alpha.6-2.tgz",
-  "_shasum": "65beeb5d00d0fcca1b0fdb679d3bd221d2772d7d",
+  "_resolved": "https://registry.npmjs.org/@angular2-material/radio/-/radio-2.0.0-alpha.6.tgz",
+  "_shasum": "2545e7f6051f271bb8c7157cf6bdc64a247c8b0f",
   "_shrinkwrap": null,
-  "_spec": "@angular2-material/radio@2.0.0-alpha.6-2",
+  "_spec": "@angular2-material/radio@2.0.0-alpha.6",
   "_where": "/home/ptemel/temel.me",
   "bugs": {
     "url": "https://github.com/angular/material2/issues"
@@ -55,8 +53,8 @@
   "devDependencies": {},
   "directories": {},
   "dist": {
-    "shasum": "65beeb5d00d0fcca1b0fdb679d3bd221d2772d7d",
-    "tarball": "https://registry.npmjs.org/@angular2-material/radio/-/radio-2.0.0-alpha.6-2.tgz"
+    "shasum": "2545e7f6051f271bb8c7157cf6bdc64a247c8b0f",
+    "tarball": "https://registry.npmjs.org/@angular2-material/radio/-/radio-2.0.0-alpha.6.tgz"
   },
   "homepage": "https://github.com/angular/material2#readme",
   "keywords": [
@@ -77,7 +75,7 @@
   "name": "@angular2-material/radio",
   "optionalDependencies": {},
   "peerDependencies": {
-    "@angular2-material/core": "2.0.0-alpha.6-2",
+    "@angular2-material/core": "2.0.0-alpha.6",
     "@angular/forms": "^0.1.0"
   },
   "readme": "ERROR: No README data found!",
@@ -87,5 +85,5 @@
   },
   "scripts": {},
   "typings": "./radio.d.ts",
-  "version": "2.0.0-alpha.6-2"
+  "version": "2.0.0-alpha.6"
 }
