@@ -1,0 +1,19 @@
+<div layout="column" class="md-inline-form">
+	<form (ngSubmit)="_createAnnouncement(form)" #form="ngForm">
+		<md-input class="full-width" required placeholder="Titel" name="title" [(ngModel)]="_createModel.title"></md-input>
+		<md-input class="full-width" required placeholder="Straße" name="street" [(ngModel)]="_createModel.street"></md-input>
+		<table class="full-width" cellspacing="0"><tr>
+			<td><md-input class="full-width" required placeholder="Stadt" name="town" [(ngModel)]="_createModel.town"></md-input></td>
+			<td><md-input class="full-width" required placeholder="PLZ" maxLength="5" name="zipCode" [(ngModel)]="_createModel.zipCode"></md-input></td>
+		</tr></table>
+		<table class="full-width" cellspacing="0"><tr>
+			<td><md-input class="full-width" type="email" required placeholder="E-Mail" name="email" [(ngModel)]="_createModel.email"></md-input></td>
+			<td><md-input class="full-width" type="password" required placeholder="Passwort" name="password" [(ngModel)]="_createModel.password"></md-input></td>
+		</tr></table>
+		<md-checkbox name="anonymous" [(ngModel)]="_createModel.anonymous">Anzeige anonym aufgeben</md-checkbox>
+		<div class="float-right">
+			<button md-raised-button type="reset">Zurücksetzen</button>
+			<button md-raised-button color="primary" type="submit">Abschicken</button>
+		</div>
+	</form>
+</div>

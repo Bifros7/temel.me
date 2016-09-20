@@ -1,0 +1,18 @@
+md-sidenav-layout {
+	background: rgba(0,0,0,0.03);
+}
+
+md-nav-list {
+	padding-top: 0px;
+}
+
+.app-content {
+	margin: 20px;
+}
+
+button[md-fab] {
+	position: absolute;
+	right: 3%;
+	top: 34px;
+	z-index: 1;
+}

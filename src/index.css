@@ -1,0 +1,40 @@
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(359deg);
+	}
+}
+
+body {
+	margin: 0px;
+}
+
+.loading {
+	background: #009688;
+	background-image: linear-gradient(135deg, #009688, #155799);
+	height: 100%;
+	opacity: 0;
+	position: fixed;
+	transition: opacity .8s ease-in-out;
+	width: 100%;
+	z-index: -1;
+}
+
+app-root:empty + .loading {
+	opacity: 1;
+	z-index: 100;
+}
+
+app-root:empty + .loading i {
+	animation: rotate 2s infinite linear;
+	color: #FFF;
+	font-size: 5em;
+	position: absolute;
+	text-align: center;
+	/*top = 50% - font-size divided by 2*/
+	top: calc(50% - 40px);
+	transform: translate(0, -50%);
+	width: 100%;
+}

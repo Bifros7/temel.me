@@ -1,8 +1,10 @@
-# AngularMaterial2Seed
+# Temel.me
 
-A seed project that includes angular-material2.
+A sample angular2 project that includes angular-material2.
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.11-webpack.9-4.
+
+If you don't have angular-cli installed globally, you can use `./node_moduls/angular-cli/bin/ng` instead.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
