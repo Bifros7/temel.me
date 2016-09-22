@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 @Component({
 	selector: 'stadtanzeiger-announcement-create',
 	templateUrl: './create.component.html',
-	styleUrls: ['./create.component.css']
+	styleUrls: ['./create.component.css'],
 })
 export class StadtanzeigerCreateComponent {
 	@Output() public createAnnouncement: EventEmitter<Object> = new EventEmitter<Object>();
@@ -24,7 +24,7 @@ export class StadtanzeigerCreateComponent {
 		});
 
 		this.createAnnouncement.subscribe(() => {
-			this._form.reset()
+			this._form.reset();
 		});
 	}
 

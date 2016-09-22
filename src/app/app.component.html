@@ -18,12 +18,21 @@
 		<span class="fill-remaining-space"></span>
 
 		<span class="overflow-hidden">
-			<button md-icon-button md-tooltip="Notifications" (click)="sidenav.open()">
+			<button md-icon-button md-tooltip="Notifications" [md-menu-trigger-for]="notificationMenu">
 				<md-icon>notifications none</md-icon>
 			</button>
-			<button md-icon-button md-tooltip="Profil" (click)="sidenav.open()">
+			<md-menu x-position="before" #notificationMenu="mdMenu">
+				<button md-menu-item disabled>Keine Notifications</button>
+			</md-menu>
+
+			<button md-icon-button md-tooltip="Profil" [md-menu-trigger-for]="profileMenu">
 				<md-icon>person</md-icon>
 			</button>
+			<md-menu x-position="before" #profileMenu="mdMenu">
+				<button md-menu-item>Foo</button>
+				<button md-menu-item>Bar</button>
+				<button md-menu-item disabled>Baz</button>
+			</md-menu>
 		</span>
 
 		<button md-fab (click)="_openGitHubRepository()">
