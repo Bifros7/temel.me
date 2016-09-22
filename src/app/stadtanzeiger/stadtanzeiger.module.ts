@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { MdButtonModule } from '@angular2-material/button';
 import { MdButtonToggleModule } from '@angular2-material/button-toggle';
@@ -25,7 +25,7 @@ import { StadtanzeigerCreateComponent } from './announcement/create/create.compo
 	],
 	imports: [
 		CommonModule,
-		FormsModule,
+		ReactiveFormsModule,
 
 		MdButtonModule.forRoot(),
 		MdButtonToggleModule.forRoot(),

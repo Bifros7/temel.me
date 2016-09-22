@@ -9,7 +9,7 @@
 					<md-list>
 						<div *ngIf="!_announcements.length">Es wurden noch keine Anzeigen aufgegeben.</div>
 						<div *ngFor="let announcement of _announcements, let last = last">
-							<stadtanzeiger-announcement [announcementModel]="announcement"></stadtanzeiger-announcement>
+							<stadtanzeiger-announcement [announcement]="announcement"></stadtanzeiger-announcement>
 							<md-divider *ngIf="!last"></md-divider>
 						</div>
 					</md-list>

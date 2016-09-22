@@ -2,6 +2,10 @@ md-sidenav-layout {
 	background: rgba(0,0,0,0.03);
 }
 
+.fill-remaining-space {
+	flex: 1 1 auto;
+}
+
 md-nav-list {
 	padding-top: 0px;
 }
@@ -12,7 +16,44 @@ md-nav-list {
 
 button[md-fab] {
 	position: absolute;
-	right: 3%;
-	top: 34px;
+	right: 14px;
+	bottom: 14px;
 	z-index: 1;
+}
+
+:host >>> * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+:host >>> .secondary {
+	color: rgba(0,0,0,0.54);
+}
+
+:host >>> .float-right {
+	float: right;
+}
+
+:host >>> .md-tab-body.md-tab-active {
+	padding: 14px;
+}
+
+:host >>> md-card.success {
+	background-color: #59B75C;
+	color: rgba(255,255,255, 0.84);
+}
+
+:host >>> md-card.info {
+	background-color: #03A9F4;
+	color: rgba(255,255,255, 0.84);
+}
+
+:host >>> md-card.warning {
+	background-color: #FF5722;
+	color: rgba(255,255,255, 0.84);
+}
+
+:host >>> md-card.danger {
+	background-color: #F44336;
+	color: rgba(255,255,255, 0.84);
 }

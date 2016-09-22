@@ -10,11 +10,23 @@
 	</md-sidenav>
 
 	<md-toolbar color="primary">
-		<button md-icon-button (click)="sidenav.open()">
+		<button md-icon-button md-tooltip="Sidenav öffnen" (click)="sidenav.open()">
 			<md-icon>menu</md-icon>
 		</button>
-		Temel.me
-		<button md-fab title="Code auf GitHub ansehen" (click)="_openGitHubRepository()">
+		<span>Temel.me</span>
+
+		<span class="fill-remaining-space"></span>
+
+		<span class="overflow-hidden">
+			<button md-icon-button md-tooltip="Notifications" (click)="sidenav.open()">
+				<md-icon>notifications none</md-icon>
+			</button>
+			<button md-icon-button md-tooltip="Profil" (click)="sidenav.open()">
+				<md-icon>person</md-icon>
+			</button>
+		</span>
+
+		<button md-fab (click)="_openGitHubRepository()">
 			<md-icon>code</md-icon>
 		</button>
 	</md-toolbar>

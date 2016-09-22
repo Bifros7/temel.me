@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-
-import { StadtanzeigerAnnouncementCreateModel } from './create.model';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
 	selector: 'stadtanzeiger-announcement-create',
@@ -8,13 +7,30 @@ import { StadtanzeigerAnnouncementCreateModel } from './create.model';
 	styleUrls: ['./create.component.css']
 })
 export class StadtanzeigerCreateComponent {
-	@Output() public createAnnouncement: EventEmitter<StadtanzeigerAnnouncementCreateModel> = new EventEmitter<StadtanzeigerAnnouncementCreateModel>();
+	@Output() public createAnnouncement: EventEmitter<Object> = new EventEmitter<Object>();
 
-	private _createModel: StadtanzeigerAnnouncementCreateModel = new StadtanzeigerAnnouncementCreateModel();
+	private _form: FormGroup;
 
-	private _createAnnouncement(form: any): void {
-		if (form.valid) {
-			this.createAnnouncement.emit(this._createModel);
+	constructor(private _formBuilder: FormBuilder) {
+		this._form = this._formBuilder.group({
+			anonymous: [false],
+			email: [''],
+			password: [''],
+			price: [''],
+			street: [''],
+			title: [''],
+			town: [''],
+			zipCode: [''],
+		});
+
+		this.createAnnouncement.subscribe(() => {
+			this._form.reset()
+		});
+	}
+
+	private _createAnnouncement(): void {
+		if (this._form.valid) {
+			this.createAnnouncement.emit(this._form.value);
 		}
 	}
 }
