@@ -1,0 +1,89 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@angular2-material/checkbox@2.0.0-alpha.6",
+        "scope": "@angular2-material",
+        "escapedName": "@angular2-material%2fcheckbox",
+        "name": "@angular2-material/checkbox",
+        "rawSpec": "2.0.0-alpha.6",
+        "spec": "2.0.0-alpha.6",
+        "type": "version"
+      },
+      "/home/ptemel/temel.me"
+    ]
+  ],
+  "_from": "@angular2-material/checkbox@2.0.0-alpha.6",
+  "_id": "@angular2-material/checkbox@2.0.0-alpha.6",
+  "_inCache": true,
+  "_location": "/@angular2-material/checkbox",
+  "_nodeVersion": "4.1.2",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/checkbox-2.0.0-alpha.6.tgz_1467300936895_0.9604847165755928"
+  },
+  "_npmUser": {
+    "name": "angular2-material",
+    "email": "angular-core+npm@google.com"
+  },
+  "_npmVersion": "3.8.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@angular2-material/checkbox@2.0.0-alpha.6",
+    "scope": "@angular2-material",
+    "escapedName": "@angular2-material%2fcheckbox",
+    "name": "@angular2-material/checkbox",
+    "rawSpec": "2.0.0-alpha.6",
+    "spec": "2.0.0-alpha.6",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@angular2-material/checkbox/-/checkbox-2.0.0-alpha.6.tgz",
+  "_shasum": "bccd55d95adc8f576d586213b3866105f2f7511a",
+  "_shrinkwrap": null,
+  "_spec": "@angular2-material/checkbox@2.0.0-alpha.6",
+  "_where": "/home/ptemel/temel.me",
+  "bugs": {
+    "url": "https://github.com/angular/material2/issues"
+  },
+  "dependencies": {},
+  "description": "Angular 2 Material checkbox",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "bccd55d95adc8f576d586213b3866105f2f7511a",
+    "tarball": "https://registry.npmjs.org/@angular2-material/checkbox/-/checkbox-2.0.0-alpha.6.tgz"
+  },
+  "homepage": "https://github.com/angular/material2#readme",
+  "keywords": [
+    "angular",
+    "material",
+    "material design",
+    "components",
+    "checkbox"
+  ],
+  "license": "MIT",
+  "main": "./checkbox.js",
+  "maintainers": [
+    {
+      "name": "angular2-material",
+      "email": "angular-core+npm@google.com"
+    }
+  ],
+  "name": "@angular2-material/checkbox",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "@angular2-material/core": "2.0.0-alpha.6",
+    "@angular/forms": "^0.1.0"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/material2.git"
+  },
+  "scripts": {},
+  "typings": "./checkbox.d.ts",
+  "version": "2.0.0-alpha.6"
+}

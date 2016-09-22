@@ -1,0 +1,90 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@angular2-material/progress-bar@2.0.0-alpha.6",
+        "scope": "@angular2-material",
+        "escapedName": "@angular2-material%2fprogress-bar",
+        "name": "@angular2-material/progress-bar",
+        "rawSpec": "2.0.0-alpha.6",
+        "spec": "2.0.0-alpha.6",
+        "type": "version"
+      },
+      "/home/ptemel/temel.me"
+    ]
+  ],
+  "_from": "@angular2-material/progress-bar@2.0.0-alpha.6",
+  "_id": "@angular2-material/progress-bar@2.0.0-alpha.6",
+  "_inCache": true,
+  "_location": "/@angular2-material/progress-bar",
+  "_nodeVersion": "4.1.2",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/progress-bar-2.0.0-alpha.6.tgz_1467300955790_0.80135542107746"
+  },
+  "_npmUser": {
+    "name": "angular2-material",
+    "email": "angular-core+npm@google.com"
+  },
+  "_npmVersion": "3.8.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@angular2-material/progress-bar@2.0.0-alpha.6",
+    "scope": "@angular2-material",
+    "escapedName": "@angular2-material%2fprogress-bar",
+    "name": "@angular2-material/progress-bar",
+    "rawSpec": "2.0.0-alpha.6",
+    "spec": "2.0.0-alpha.6",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@angular2-material/progress-bar/-/progress-bar-2.0.0-alpha.6.tgz",
+  "_shasum": "537ab94d5180f8944872f1aaf706ceb17a0a9218",
+  "_shrinkwrap": null,
+  "_spec": "@angular2-material/progress-bar@2.0.0-alpha.6",
+  "_where": "/home/ptemel/temel.me",
+  "bugs": {
+    "url": "https://github.com/angular/material2/issues"
+  },
+  "dependencies": {},
+  "description": "Angular 2 Material progress-bar",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "537ab94d5180f8944872f1aaf706ceb17a0a9218",
+    "tarball": "https://registry.npmjs.org/@angular2-material/progress-bar/-/progress-bar-2.0.0-alpha.6.tgz"
+  },
+  "homepage": "https://github.com/angular/material2#readme",
+  "keywords": [
+    "angular",
+    "material",
+    "material design",
+    "components",
+    "progress",
+    "progressbar",
+    "loading"
+  ],
+  "license": "MIT",
+  "main": "./progress-bar.js",
+  "maintainers": [
+    {
+      "name": "angular2-material",
+      "email": "angular-core+npm@google.com"
+    }
+  ],
+  "name": "@angular2-material/progress-bar",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "@angular2-material/core": "2.0.0-alpha.6"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/material2.git"
+  },
+  "scripts": {},
+  "typings": "./progress-bar.d.ts",
+  "version": "2.0.0-alpha.6"
+}
