@@ -1,13 +1,14 @@
-<md-nav-list dense>
+<md-nav-list [@expandChildren]="_showChildren" dense class="no-padding">
 	<md-list-item *ngIf="navigationitem.children.length > 0" (click)="_showChildren = !_showChildren">
 		<md-icon md-list-icon>{{navigationitem.icon}}</md-icon>
 		<span md-line>{{navigationitem.description}}</span>
+		<md-icon [@rotateArrow]="_showChildren">keyboard_arrow_down</md-icon>
 	</md-list-item>
-	<md-list-item *ngIf="navigationitem.children.length === 0" [routerLink]="navigationitem.routerLink">
+	<md-list-item *ngIf="navigationitem.children.length === 0" (click)="linkClicked.emit(null)" [routerLink]="navigationitem.routerLink">
 		<md-icon md-list-icon>{{navigationitem.icon}}</md-icon>
 		<span md-line>{{navigationitem.description}}</span>
 	</md-list-item>
 </md-nav-list>
 <span *ngIf="_showChildren">
-	<navigationitem *ngFor="let child of navigationitem.children" [navigationitem]="child"></navigationitem>
+	<navigationitem *ngFor="let child of navigationitem.children" [navigationitem]="child"(linkClicked)="linkClicked.emit(null)"></navigationitem>
 </span>
