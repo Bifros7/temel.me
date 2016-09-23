@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { AppNavigationModel } from './navigation.model';
+import { NavigationitemModel } from './navigationitem/navigationitem.model';
 
 @Component({
 	selector: 'app-root',
@@ -8,18 +8,24 @@ import { AppNavigationModel } from './navigation.model';
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	private _views: Array<AppNavigationModel> = [
-		new AppNavigationModel(
-			'Home',
-			'Home',
-			'home',
-			'/home'
+	private _child: NavigationitemModel = new NavigationitemModel(
+		[],
+		'Child',
+		'child care',
+		'/stadtanzeiger'
+	)
+	private _views: Array<NavigationitemModel> = [
+		new NavigationitemModel(
+			[this._child,this._child,this._child,this._child,this._child,this._child,],
+			'CRM',
+			'account_circle',
+			'',
 		),
-		new AppNavigationModel(
-			'Sindelfinger Stadtanzeiger',
-			'Lokalanzeigen',
-			'assignment ind',
-			'/stadtanzeiger'
+		new NavigationitemModel(
+			[this._child,this._child,this._child,this._child,this._child,this._child,],
+			'ERP',
+			'monetization_on',
+			'',
 		)
 	];
 

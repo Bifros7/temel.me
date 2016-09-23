@@ -18,10 +18,12 @@ import { routing, appRoutingProviders }  from './app.routing';
 
 import { HomeModule } from './home/home.module';
 import { StadtanzeigerModule } from './stadtanzeiger/stadtanzeiger.module';
+import { NavigationitemComponent } from './navigationitem/navigationitem.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
+		NavigationitemComponent,
 	],
 	imports: [
 		BrowserModule,

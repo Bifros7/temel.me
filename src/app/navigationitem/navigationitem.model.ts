@@ -1,6 +1,6 @@
-export class AppNavigationModel {
+export class NavigationitemModel {
 	constructor(
-		public name: string = '',
+		public children: Array<NavigationitemModel> = [],
 		public description: string = 'info',
 		public icon: string = '',
 		public routerLink: string = ''
