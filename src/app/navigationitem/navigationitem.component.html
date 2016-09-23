@@ -8,4 +8,6 @@
 		<span md-line>{{navigationitem.description}}</span>
 	</md-list-item>
 </md-nav-list>
-<navigationitem *ngFor="let child of navigationitem.children" [navigationitem]="child"></navigationitem>
+<span *ngIf="_showChildren">
+	<navigationitem *ngFor="let child of navigationitem.children" [navigationitem]="child"></navigationitem>
+</span>

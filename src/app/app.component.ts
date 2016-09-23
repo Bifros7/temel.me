@@ -11,7 +11,7 @@ export class AppComponent {
 	private _child: NavigationitemModel = new NavigationitemModel(
 		[],
 		'Child',
-		'child care',
+		'child_care',
 		'/stadtanzeiger'
 	)
 	private _views: Array<NavigationitemModel> = [
