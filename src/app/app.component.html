@@ -1,8 +1,6 @@
 <md-sidenav-layout fullscreen>
 	<md-sidenav class="app-sidenav" #sidenav>
-		<md-list dense>
-			<navigationitem *ngFor="let view of _views" [navigationitem]="view"></navigationitem>
-		</md-list>
+		<navigationitem *ngFor="let view of _views" [navigationitem]="view"></navigationitem>
 	</md-sidenav>
 
 	<md-toolbar color="primary">
