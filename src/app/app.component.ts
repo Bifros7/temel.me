@@ -45,7 +45,31 @@ export class AppComponent {
 			'ERP',
 			'monetization_on',
 			'',
-		)
+		),
+		new NavigationitemModel(
+			[this._child1, this._child2, this._childNested, this._child3,],
+			'CRM',
+			'account_circle',
+			'',
+		),
+		new NavigationitemModel(
+			[this._child1, this._child2, this._childNested, this._child3,],
+			'ERP',
+			'monetization_on',
+			'',
+		),
+		new NavigationitemModel(
+			[this._child1, this._child2, this._childNested, this._child3,],
+			'CRM',
+			'account_circle',
+			'',
+		),
+		new NavigationitemModel(
+			[this._child1, this._child2, this._childNested, this._child3,],
+			'ERP',
+			'monetization_on',
+			'',
+		),
 	];
 
 	private _openGitHubRepository(): void {
