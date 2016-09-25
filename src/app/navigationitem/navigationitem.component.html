@@ -1,4 +1,4 @@
-<md-nav-list [@expandChildren]="_showChildren" dense class="no-padding">
+<md-nav-list [@expandChildren]="_showChildren" dense class="no-padding {{'level-' + level}}">
 	<md-list-item *ngIf="navigationitem.children.length > 0" (click)="_showChildren = !_showChildren">
 		<md-icon md-list-icon>{{navigationitem.icon}}</md-icon>
 		<span md-line>{{navigationitem.description}}</span>
@@ -10,5 +10,5 @@
 	</md-list-item>
 </md-nav-list>
 <span *ngIf="_showChildren">
-	<navigationitem *ngFor="let child of navigationitem.children" [navigationitem]="child"(linkClicked)="linkClicked.emit(null)"></navigationitem>
+	<navigationitem *ngFor="let child of navigationitem.children" [navigationitem]="child" [level]="level + 1" (linkClicked)="linkClicked.emit(null)"></navigationitem>
 </span>

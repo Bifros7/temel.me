@@ -17,6 +17,24 @@ button[md-fab] {
 	z-index: 1;
 }
 
+:host >>> navigationitem:not(:first-child) > md-nav-list.level-1 {
+	border-top: 1px solid #009688;
+}
+
+/*this rule can be activated for visual nesting*/
+/*:host >>> navigationitem > md-nav-list.level-2 > md-list-item > div::before {
+	content: '-'
+}*/
+
+.no-select, .no-select * {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 :host >>> * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
