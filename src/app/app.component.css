@@ -40,6 +40,10 @@ button[md-fab] {
 	color: rgba(0,0,0,0.54);
 }
 
+:host >>> .faded {
+	color: rgba(0,0,0,0.15);
+}
+
 :host >>> .float-right {
 	float: right;
 }
