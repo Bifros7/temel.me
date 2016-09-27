@@ -1,3 +1,4 @@
+<md-divider *ngIf="!first && level === 1"></md-divider>
 <md-nav-list [@expandChildren]="_showChildren" dense class="no-padding {{'level-' + level}}">
 	<md-list-item *ngIf="navigationitem.children.length > 0" (click)="_showChildren = !_showChildren">
 		<md-icon md-list-icon>{{navigationitem.icon}}</md-icon>

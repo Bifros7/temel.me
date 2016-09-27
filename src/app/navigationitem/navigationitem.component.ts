@@ -22,6 +22,7 @@ import { NavigationitemModel } from './navigationitem.model';
 	]
 })
 export class NavigationitemComponent {
+	@Input() public first: boolean;
 	@Input() public level: number;
 	@Input() public navigationitem: NavigationitemModel;
 	@Output() public linkClicked: EventEmitter<void> = new EventEmitter<void>();

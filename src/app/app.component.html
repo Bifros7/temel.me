@@ -1,6 +1,6 @@
 <md-sidenav-layout fullscreen>
 	<md-sidenav class="app-sidenav" #sidenav>
-		<navigationitem *ngFor="let view of _views" class="no-select" [navigationitem]="view" [level]="1" (linkClicked)="sidenav.close()"></navigationitem>
+		<navigationitem *ngFor="let view of _views, let first = first" class="no-select" [first]="first" [navigationitem]="view" [level]="1" (linkClicked)="sidenav.close()"></navigationitem>
 	</md-sidenav>
 
 	<md-toolbar color="primary">
