@@ -1,5 +1,5 @@
 <md-sidenav-layout fullscreen>
-	<md-sidenav class="app-sidenav" #sidenav>
+	<md-sidenav class="app-sidenav no-select" #sidenav>
 		<div class="banner">
 			<button md-icon-button md-tooltip="Sidenav schließen" (click)="sidenav.close()">
 				<md-icon>menu</md-icon>
@@ -27,7 +27,7 @@
 		</md-tab-group>
 	</md-sidenav>
 
-	<md-toolbar color="primary">
+	<md-toolbar color="primary" class="no-select">
 		<button md-icon-button md-tooltip="Sidenav öffnen" (click)="sidenav.open()">
 			<md-icon>menu</md-icon>
 		</button>
