@@ -1,7 +1,7 @@
 <md-sidenav-layout fullscreen>
 	<md-sidenav class="app-sidenav no-select" #sidenav>
 		<div class="banner">
-			<button md-icon-button md-tooltip="Sidenav schließen" (click)="sidenav.close()">
+			<button md-icon-button (click)="sidenav.close()">
 				<md-icon>menu</md-icon>
 			</button>
 			<span>Temel.me</span>
@@ -28,7 +28,7 @@
 	</md-sidenav>
 
 	<md-toolbar color="primary" class="no-select">
-		<button md-icon-button md-tooltip="Sidenav öffnen" (click)="sidenav.open()">
+		<button md-icon-button (click)="sidenav.open()">
 			<md-icon>menu</md-icon>
 		</button>
 		<span>Temel.me</span>
@@ -36,14 +36,14 @@
 		<span class="fill-remaining-space"></span>
 
 		<span class="overflow-hidden">
-			<button md-icon-button md-tooltip="Notifications" [md-menu-trigger-for]="notificationMenu">
+			<button md-icon-button [md-menu-trigger-for]="notificationMenu">
 				<md-icon>notifications_none</md-icon>
 			</button>
 			<md-menu x-position="before" #notificationMenu="mdMenu">
 				<button md-menu-item disabled>Keine Notifications</button>
 			</md-menu>
 
-			<button md-icon-button md-tooltip="Settings" [md-menu-trigger-for]="settingsMenu">
+			<button md-icon-button [md-menu-trigger-for]="settingsMenu">
 				<md-icon>settings_notifications</md-icon>
 			</button>
 			<md-menu x-position="before" #settingsMenu="mdMenu">
