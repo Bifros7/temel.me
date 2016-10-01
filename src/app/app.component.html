@@ -1,6 +1,30 @@
 <md-sidenav-layout fullscreen>
 	<md-sidenav class="app-sidenav" #sidenav>
-		<navigationitem *ngFor="let view of _views, let first = first" class="no-select" [first]="first" [navigationitem]="view" [level]="1" (linkClicked)="sidenav.close()"></navigationitem>
+		<div class="banner">
+			<button md-icon-button md-tooltip="Sidenav schließen" (click)="sidenav.close()">
+				<md-icon>menu</md-icon>
+			</button>
+			<span>Temel.me</span>
+		</div>
+		<md-divider class="faded"></md-divider>
+		<md-tab-group>
+			<md-tab>
+				<template md-tab-label>
+					Navigation
+				</template>
+				<template md-tab-content>
+					<navigationitem *ngFor="let view of _views, let first = first" class="no-select" [first]="first" [navigationitem]="view" [level]="1" (linkClicked)="sidenav.close()"></navigationitem>
+				</template>
+			</md-tab>
+			<md-tab>
+				<template md-tab-label>
+					Sidebar
+				</template>
+				<template md-tab-content>
+					Telefonliste etc.
+				</template>
+			</md-tab>
+		</md-tab-group>
 	</md-sidenav>
 
 	<md-toolbar color="primary">

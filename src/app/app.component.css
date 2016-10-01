@@ -31,6 +31,18 @@ button[md-fab] {
 	user-select: none;
 }
 
+.banner {
+	align-items: center;
+	background-color: #3f51b5;
+	color: rgba(255, 255, 255, 0.87);
+	display: flex;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	font-size: 20px;
+	font-weight: 400;
+	height: 64px;
+	padding-left: 20px;
+}
+
 :host >>> * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -41,7 +53,7 @@ button[md-fab] {
 }
 
 :host >>> .faded {
-	color: rgba(0,0,0,0.15);
+	color: rgba(0,0,0,0.125);
 }
 
 :host >>> .float-right {

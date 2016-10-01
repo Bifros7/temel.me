@@ -16,7 +16,6 @@
 			"mobile": false,
 			"styles": [
 				"styles.css",
-				"../node_modules/@angular/material/core/overlay/overlay.css",
 				"../node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css"
 			],
 			"scripts": [],
