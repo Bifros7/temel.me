@@ -12,8 +12,8 @@ body {
 }
 
 .loading {
-	background: #009688;
-	background-image: linear-gradient(135deg, #009688, #155799);
+	background: #0D47A1;
+	background-image: linear-gradient(150deg, #0D47A1, #42A5F5);
 	height: 100%;
 	opacity: 0;
 	position: fixed;
