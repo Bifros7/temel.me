@@ -73,6 +73,6 @@ export class AppComponent {
 	];
 
 	private _openGitHubRepository(): void {
-		location.href = 'https://github.com/Bifros7/temel.me';
+		location.href = 'https://github.com/PascalTemel/temel.me';
 	}
 }

@@ -3,11 +3,11 @@
 		<md-tab-group>
 			<md-tab>
 				<template md-tab-label>
-					Anzeigen
+					Announcements
 				</template>
 				<template md-tab-content>
 					<md-list>
-						<div *ngIf="!_announcements.length">Es wurden noch keine Anzeigen aufgegeben.</div>
+						<div *ngIf="!_announcements.length">No announcements have been posted yet.</div>
 						<div *ngFor="let announcement of _announcements, let last = last">
 							<stadtanzeiger-announcement [announcement]="announcement"></stadtanzeiger-announcement>
 							<md-divider *ngIf="!last"></md-divider>
@@ -17,7 +17,7 @@
 			</md-tab>
 			<md-tab>
 				<template md-tab-label>
-					Neue Anzeige
+					New announcement
 				</template>
 				<template md-tab-content>
 					<stadtanzeiger-announcement-create (createAnnouncement)="_createAnnouncement($event)"></stadtanzeiger-announcement-create>
