@@ -5,13 +5,13 @@ import { MaterialModule } from '@angular/material';
 
 import { StadtanzeigerAnnouncementComponent } from './announcement/announcement.component';
 import { StadtanzeigerComponent } from './stadtanzeiger.component';
-import { StadtanzeigerCreateComponent } from './announcement/create/create.component';
+import { StadtanzeigerAnnouncementCreateComponent } from './announcement/create/create.component';
 
 @NgModule({
 	declarations: [
 		StadtanzeigerAnnouncementComponent,
+		StadtanzeigerAnnouncementCreateComponent,
 		StadtanzeigerComponent,
-		StadtanzeigerCreateComponent,
 	],
 	imports: [
 		CommonModule,

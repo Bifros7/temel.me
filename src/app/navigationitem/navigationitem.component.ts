@@ -27,5 +27,5 @@ export class NavigationitemComponent {
 	@Input() public navigationitem: NavigationitemModel;
 	@Output() public linkClicked: EventEmitter<void> = new EventEmitter<void>();
 
-	private _childrenVisible: boolean = false;
+	public childrenVisible: boolean = false;
 }

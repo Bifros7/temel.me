@@ -6,7 +6,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 	templateUrl: './create.component.html',
 	styleUrls: ['./create.component.css'],
 })
-export class StadtanzeigerCreateComponent {
+export class StadtanzeigerAnnouncementCreateComponent {
 	@Output() public createAnnouncement: EventEmitter<Object> = new EventEmitter<Object>();
 
 	private _form: FormGroup;

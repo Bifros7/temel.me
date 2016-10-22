@@ -33,7 +33,7 @@ export class AppComponent {
 		'/stadtanzeiger'
 	)
 
-	private _views: Array<NavigationitemModel> = [
+	public views: Array<NavigationitemModel> = [
 		new NavigationitemModel(
 			[this._child1, this._child2, this._childNested, this._child3,],
 			'CRM',
@@ -72,7 +72,7 @@ export class AppComponent {
 		),
 	];
 
-	private _openGitHubRepository(): void {
+	public openGitHubRepository(): void {
 		location.href = 'https://github.com/PascalTemel/temel.me';
 	}
 }

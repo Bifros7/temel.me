@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
-import { StadtanzeigerCreateComponent } from './create.component';
+import { StadtanzeigerAnnouncementCreateComponent } from './create.component';
 
 describe('Component: Create', () => {
 	it('should create an instance', () => {
-		let component = new StadtanzeigerCreateComponent();
+		let component = new StadtanzeigerAnnouncementCreateComponent();
 		expect(component).toBeTruthy();
 	});
 });

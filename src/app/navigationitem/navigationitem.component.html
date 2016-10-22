@@ -1,15 +1,15 @@
 <md-divider *ngIf="!first && level === 1" class="faded"></md-divider>
-<md-nav-list [@expandChildren]="_showChildren" dense class="no-padding {{'level-' + level}}">
-	<md-list-item *ngIf="navigationitem.children.length > 0" (click)="_showChildren = !_showChildren">
+<md-nav-list [@expandChildren]="showChildren" dense class="no-padding {{'level-' + level}}">
+	<md-list-item *ngIf="navigationitem.children.length > 0" (click)="showChildren = !showChildren">
 		<md-icon md-list-icon>{{navigationitem.icon}}</md-icon>
 		<span md-line>{{navigationitem.description}}</span>
-		<md-icon [@rotateArrow]="_showChildren">keyboard_arrow_down</md-icon>
+		<md-icon [@rotateArrow]="showChildren">keyboard_arrow_down</md-icon>
 	</md-list-item>
 	<md-list-item *ngIf="navigationitem.children.length === 0" (click)="linkClicked.emit(null)" [routerLink]="navigationitem.routerLink">
 		<md-icon md-list-icon>{{navigationitem.icon}}</md-icon>
 		<span md-line>{{navigationitem.description}}</span>
 	</md-list-item>
 </md-nav-list>
-<span *ngIf="_showChildren">
+<span *ngIf="showChildren">
 	<navigationitem *ngFor="let child of navigationitem.children" [navigationitem]="child" [level]="level + 1" (linkClicked)="linkClicked.emit(null)"></navigationitem>
 </span>

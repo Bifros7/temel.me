@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
 	selector: 'stadtanzeiger',
@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: ['./stadtanzeiger.component.css']
 })
 export class StadtanzeigerComponent {
-	private _announcements: Array<Object> = [];
+	public announcements: Array<Object> = [];
 
-	private _createAnnouncement(announcement: Object): void {
-		this._announcements.push(announcement);
+	public createAnnouncement(announcement: Object): void {
+		this.announcements.push(announcement);
 	}
 }
