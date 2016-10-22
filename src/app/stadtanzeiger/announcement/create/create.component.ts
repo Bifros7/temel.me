@@ -9,10 +9,10 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class StadtanzeigerAnnouncementCreateComponent {
 	@Output() public createAnnouncement: EventEmitter<Object> = new EventEmitter<Object>();
 
-	private _form: FormGroup;
+	public form: FormGroup;
 
 	constructor(private _formBuilder: FormBuilder) {
-		this._form = this._formBuilder.group({
+		this.form = this._formBuilder.group({
 			anonymous: [false],
 			email: [''],
 			password: [''],
@@ -24,13 +24,13 @@ export class StadtanzeigerAnnouncementCreateComponent {
 		});
 
 		this.createAnnouncement.subscribe(() => {
-			this._form.reset();
+			this.form.reset();
 		});
 	}
 
-	private _createAnnouncement(): void {
-		if (this._form.valid) {
-			this.createAnnouncement.emit(this._form.value);
+	public submit(): void {
+		if (this.form.valid) {
+			this.createAnnouncement.emit(this.form.value);
 		}
 	}
 }

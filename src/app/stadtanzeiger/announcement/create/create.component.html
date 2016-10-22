@@ -1,5 +1,5 @@
 <div layout="column" class="md-inline-form">
-	<form [formGroup]="_form" (ngSubmit)="_createAnnouncement()">
+	<form [formGroup]="form" (ngSubmit)="submit()">
 		<table class="full-width">
 			<tr>
 				<td><md-input class="full-width" required placeholder="Title" formControlName="title"></md-input></td>
