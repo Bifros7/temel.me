@@ -8,66 +8,31 @@ import { NavigationitemModel } from './navigationitem/navigationitem.model';
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	private _child1: NavigationitemModel = new NavigationitemModel(
-		[],
-		'Child 1',
-		'child_care',
-		'/'
-	)
-	private _child2: NavigationitemModel = new NavigationitemModel(
-		[],
-		'Child 2',
-		'donut_small',
-		'/stadtanzeiger'
-	)
-	private _child3: NavigationitemModel = new NavigationitemModel(
-		[],
-		'Child 3',
-		'event',
-		'/home'
-	)
-	private _childNested: NavigationitemModel = new NavigationitemModel(
-		[this._child1, this._child2, this._child3,],
-		'Nested child',
-		'view_list',
-		'/stadtanzeiger'
-	)
-
 	public views: Array<NavigationitemModel> = [
 		new NavigationitemModel(
-			[this._child1, this._child2, this._childNested, this._child3,],
-			'CRM',
-			'account_circle',
-			'',
+			[],
+			'Home',
+			'home',
+			'/home'
 		),
 		new NavigationitemModel(
-			[this._child1, this._child2, this._childNested, this._child3,],
-			'ERP',
-			'monetization_on',
-			'',
-		),
-		new NavigationitemModel(
-			[this._child1, this._child2, this._childNested, this._child3,],
-			'CRM',
-			'account_circle',
-			'',
-		),
-		new NavigationitemModel(
-			[this._child1, this._child2, this._childNested, this._child3,],
-			'ERP',
-			'monetization_on',
-			'',
-		),
-		new NavigationitemModel(
-			[this._child1, this._child2, this._childNested, this._child3,],
-			'CRM',
-			'account_circle',
-			'',
-		),
-		new NavigationitemModel(
-			[this._child1, this._child2, this._childNested, this._child3,],
-			'ERP',
-			'monetization_on',
+			[
+				new NavigationitemModel(
+					[],
+					'Company',
+					'business',
+					'/company'
+				),
+				new NavigationitemModel(
+					[],
+					'Stadtanzeiger',
+					'assignment',
+					'/stadtanzeiger'
+				)
+
+			],
+			'Example modules',
+			'info',
 			'',
 		),
 	];

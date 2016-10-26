@@ -8,6 +8,7 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { routing, appRoutingProviders }  from './app.routing';
 
+import { CompanyModule } from './company/company.module';
 import { HomeModule } from './home/home.module';
 import { StadtanzeigerModule } from './stadtanzeiger/stadtanzeiger.module';
 import { NavigationitemComponent } from './navigationitem/navigationitem.component';
@@ -22,11 +23,11 @@ import { NavigationitemComponent } from './navigationitem/navigationitem.compone
 		CommonModule,
 		FormsModule,
 		HttpModule,
-
 		MaterialModule.forRoot(),
 
 		routing,
 
+		CompanyModule,
 		HomeModule,
 		StadtanzeigerModule,
 	],
