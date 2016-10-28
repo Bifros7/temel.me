@@ -28,8 +28,7 @@ export class AppComponent {
 					'Stadtanzeiger',
 					'assignment',
 					'/stadtanzeiger'
-				)
-
+				),
 			],
 			'Example modules',
 			'info',

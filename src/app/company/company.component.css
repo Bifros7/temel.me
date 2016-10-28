@@ -1,0 +1,53 @@
+#main-container {
+	display: flex;
+	width: 100%;
+}
+
+#customer {
+	flex: 1;
+}
+
+#contacts {
+	flex: 1;
+	margin-left: 4px;
+}
+
+#details {
+	flex: 3;
+	margin-left: 4px;
+}
+
+md-divider {
+	margin: 7px 0px 8px 0px; /* 7px because the divider has border-top: 1px */
+}
+
+table {
+	width: 100%;
+	table-layout: fixed;
+}
+
+tr {
+	vertical-align: baseline;
+}
+
+tr > th.title {
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+}
+
+td {
+	width: 50%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+td.label {
+	text-align: right;
+	font-weight: bold;
+}
+
+td.value {
+	text-align: left;
+}
