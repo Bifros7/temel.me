@@ -108,6 +108,9 @@
 				</tr>
 			</table>
 		</md-card-content>
+		<md-card-actions>
+			<button md-button (click)="editCustomer()" [disabled]="customerEditDialogRef">EDIT</button>
+		</md-card-actions>
 	</md-card>
 	<md-card id="contacts">
 		<md-card-title>Contacts</md-card-title>

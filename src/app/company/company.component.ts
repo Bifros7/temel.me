@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewContainerRef } from '@angular/core';
+import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
 
 @Component({
 	selector: 'company',
@@ -34,7 +35,7 @@ export class CompanyComponent {
 		location: 'Böblingen',
 		clerk: 'Angela Merkel',
 		town: 'Öhringen',
-		zipCode: '74613',
+		zipCode: 74613,
 		street: 'Weygangstraße 3',
 		yearlySales: [
 			{
@@ -59,4 +60,34 @@ export class CompanyComponent {
 			},
 		],
 	}
+	public customerEditDialogRef: MdDialogRef<CustomerEditDialog>;
+	private _customerEditDialogCloseResult: string;
+
+	public constructor(
+		private _dialog: MdDialog,
+		private _viewContainerRef: ViewContainerRef
+	) { }
+
+	public editCustomer(): void {
+		let config = new MdDialogConfig();
+		config.viewContainerRef = this._viewContainerRef;
+
+		this.customerEditDialogRef = this._dialog.open(CustomerEditDialog, config);
+
+		this.customerEditDialogRef.afterClosed().subscribe((result) => {
+			this._customerEditDialogCloseResult = result;
+			this.customerEditDialogRef = null;
+		});
+	}
+}
+
+@Component({
+	selector: 'customer-edit-dialog',
+	template: `
+		<p>Not implemented yet</p>
+		<button md-button (click)="dialogRef.close('foo')">Close dialog</button>
+	`
+})
+export class CustomerEditDialog {
+	constructor(public dialogRef: MdDialogRef<CustomerEditDialog>) { }
 }
