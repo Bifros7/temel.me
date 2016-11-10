@@ -8,21 +8,11 @@
 		</div>
 		<md-divider class="faded"></md-divider>
 		<md-tab-group>
-			<md-tab>
-				<template md-tab-label>
-					Navigation
-				</template>
-				<template md-tab-content>
-					<navigationitem *ngFor="let view of views, let first = first" class="no-select" [first]="first" [navigationitem]="view" [level]="1" (linkClicked)="sidenav.close()"></navigationitem>
-				</template>
+			<md-tab label="Navigation">
+				<navigationitem *ngFor="let view of views, let first = first" class="no-select" [first]="first" [navigationitem]="view" [level]="1" (linkClicked)="sidenav.close()"></navigationitem>
 			</md-tab>
-			<md-tab>
-				<template md-tab-label>
-					Sidebar
-				</template>
-				<template md-tab-content>
-					Content
-				</template>
+			<md-tab label="Sidebar">
+				Content
 			</md-tab>
 		</md-tab-group>
 	</md-sidenav>

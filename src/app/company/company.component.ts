@@ -1,5 +1,5 @@
 import { Component, ViewContainerRef } from '@angular/core';
-import { MdDialog, MdDialogConfig, MdDialogRef } from '@angular/material';
+import { MdDialog, MdDialogRef } from '@angular/material';
 
 @Component({
 	selector: 'company',
@@ -69,10 +69,7 @@ export class CompanyComponent {
 	) { }
 
 	public editCustomer(): void {
-		let config = new MdDialogConfig();
-		config.viewContainerRef = this._viewContainerRef;
-
-		this.customerEditDialogRef = this._dialog.open(CustomerEditDialog, config);
+		this.customerEditDialogRef = this._dialog.open(CustomerEditDialog);
 
 		this.customerEditDialogRef.afterClosed().subscribe((result) => {
 			this._customerEditDialogCloseResult = result;
@@ -86,7 +83,10 @@ export class CompanyComponent {
 	template: `
 		<p>Not implemented yet</p>
 		<button md-button (click)="dialogRef.close('foo')">Close dialog</button>
-	`
+	`,
+	styles: [
+		'p { font-family: Roboto, "Helvetica Neue", sans-serif; }'
+	]
 })
 export class CustomerEditDialog {
 	constructor(public dialogRef: MdDialogRef<CustomerEditDialog>) { }
