@@ -9,7 +9,13 @@
 		<md-divider class="faded"></md-divider>
 		<md-tab-group>
 			<md-tab label="Navigation">
-				<navigationitem *ngFor="let view of views, let first = first" class="no-select" [first]="first" [navigationitem]="view" [level]="1" (linkClicked)="sidenav.close()"></navigationitem>
+				<navigationitem *ngFor="let view of views, let first = first"
+					class="no-select"
+					[first]="first"
+					[navigationitem]="view"
+					[level]="1"
+					(linkClicked)="sidenav.close()"
+				></navigationitem>
 			</md-tab>
 			<md-tab label="Sidebar">
 				Content
@@ -43,7 +49,7 @@
 			</md-menu>
 		</span>
 
-		<button md-fab (click)="openGitHubRepository()">
+		<button md-fab mdTooltip="View code on GitHub" mdTooltipPosition="before" (click)="openGitHubRepository()">
 			<md-icon>code</md-icon>
 		</button>
 	</md-toolbar>

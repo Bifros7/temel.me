@@ -1,13 +1,16 @@
 {
 	"project": {
-		"version": "1.0.0-beta.11-webpack.9-4",
-		"name": "angular-material2-seed"
+		"version": "1.0.0-beta.26",
+		"name": "temel-me"
 	},
 	"apps": [
 		{
 			"root": "src",
 			"outDir": "dist",
-			"assets": "assets",
+			"assets": [
+				"assets",
+				"favicon.ico"
+			],
 			"index": "index.html",
 			"main": "main.ts",
 			"test": "test.ts",
@@ -15,8 +18,7 @@
 			"prefix": "app",
 			"mobile": false,
 			"styles": [
-				"styles.css",
-				"../node_modules/@angular/material/core/theming/prebuilt/indigo-pink.css"
+				"styles.css"
 			],
 			"scripts": [],
 			"environments": {
@@ -26,8 +28,6 @@
 			}
 		}
 	],
-	"addons": [],
-	"packages": [],
 	"e2e": {
 		"protractor": {
 			"config": "./protractor.conf.js"
@@ -40,6 +40,18 @@
 	},
 	"defaults": {
 		"styleExt": "css",
-		"prefixInterfaces": false
+		"prefixInterfaces": false,
+		"inline": {
+			"style": false,
+			"template": false
+		},
+		"spec": {
+			"class": false,
+			"component": true,
+			"directive": true,
+			"module": false,
+			"pipe": true,
+			"service": true
+		}
 	}
 }

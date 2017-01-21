@@ -3,7 +3,7 @@
 		<md-card-title>Customer</md-card-title>
 		<md-card-content>
 			<table>
-				<tr md-tooltip="Customer number">
+				<tr mdTooltip="Customer number">
 					<td class="label">#</td>
 					<td class="value">{{customer.number}}</td>
 				</tr>
@@ -64,7 +64,7 @@
 				<tr>
 					<td class="label">Account managers</td>
 					<td class="value">
-						<span *ngFor="let accountManager of customer.accountManagers, let last = last" md-tooltip="{{accountManager.responsibility}}">
+						<span *ngFor="let accountManager of customer.accountManagers, let last = last" mdTooltip="{{accountManager.responsibility}}">
 							{{accountManager.name}}
 							<br *ngIf="!last">
 						</span>

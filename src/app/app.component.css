@@ -60,29 +60,6 @@ button[md-fab] {
 	float: right;
 }
 
-:host >>> .md-tab-body.md-tab-active {
-	padding: 14px;
-}
-
-:host >>> md-card.notification {
-	padding: 8px;
-	font-size: 18px;
-	text-align: center;
-	color: rgba(255,255,255, 0.84);
-}
-
-:host >>> md-card.success {
-	background-color: #59B75C;
-}
-
-:host >>> md-card.info {
-	background-color: #03A9F4;
-}
-
-:host >>> md-card.warning {
-	background-color: #FF5722;
-}
-
-:host >>> md-card.danger {
-	background-color: #F44336;
+:host >>> md-tab-body.md-tab-body-active {
+	padding: 2px;
 }
