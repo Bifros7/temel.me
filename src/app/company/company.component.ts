@@ -1,13 +1,94 @@
 import { Component, ViewContainerRef } from '@angular/core';
 import { MdDialog, MdDialogRef } from '@angular/material';
 
+export interface IContact {
+	emailAddresses: Array<string>;
+	fax: string;
+	name: string;
+	phone: string;
+	street: string;
+	town: string;
+	zipCode: number;
+}
+
+export interface ICustomer {
+	accountManagers: Array<{name: string, responsibility: string}>;
+	clerk: string;
+	emailAddresses: Array<string>;
+	employees: string;
+	fax: string;
+	group: string;
+	industry: string;
+	location: string;
+	name: string;
+	number: number;
+	phone: string;
+	priceGroup: string;
+	revenue: string;
+	street: string;
+	town: string;
+	website: string;
+	yearlySales: Array<{year: number, sales: number}>;
+	zipCode: number;
+}
+
 @Component({
 	selector: 'company',
 	templateUrl: './company.component.html',
 	styleUrls: ['./company.component.css']
 })
 export class CompanyComponent {
-	public customer: any = {
+	public contacts: Array<IContact> = [
+		{
+			emailAddresses: [
+				'admin@temel.me',
+				'pascal@temel.me',
+			],
+			fax: '',
+			name: 'Pascal Temel',
+			phone: '49 172 1234567',
+			street: 'Foostraße 51',
+			town: 'Grafenau',
+			zipCode: 71120,
+		},
+		{
+			emailAddresses: [
+				'admin@temel.me',
+				'pascal@temel.me',
+			],
+			fax: '',
+			name: 'Pascal Temel',
+			phone: '49 172 1234567',
+			street: 'Foostraße 51',
+			town: 'Grafenau',
+			zipCode: 71120,
+		},
+		{
+			emailAddresses: [
+				'admin@temel.me',
+				'pascal@temel.me',
+			],
+			fax: '',
+			name: 'Pascal Temel',
+			phone: '49 172 1234567',
+			street: 'Foostraße 51',
+			town: 'Grafenau',
+			zipCode: 71120,
+		},
+		{
+			emailAddresses: [
+				'admin@temel.me',
+				'pascal@temel.me',
+			],
+			fax: '',
+			name: 'Pascal Temel',
+			phone: '49 172 1234567',
+			street: 'Foostraße 51',
+			town: 'Grafenau',
+			zipCode: 71120,
+		}
+	];
+	public customer: ICustomer = {
 		number: 248291,
 		name: 'Foobarbaz AG testtest 123456789',
 		phone: '+49 172 1234567',

@@ -115,7 +115,48 @@
 	<md-card id="contacts">
 		<md-card-title>Contacts</md-card-title>
 		<md-card-content>
-			foo
+			<md-card *ngFor="let contact of contacts">
+				<md-card-title>{{contact.name}}</md-card-title>
+				<md-card-content>
+					<table>
+						<tr>
+							<td class="label">Phone</td>
+							<td class="value">{{contact.phone}}</td>
+						</tr>
+						<tr>
+							<td class="label">Fax</td>
+							<td class="value">{{contact.fax}}</td>
+						</tr>
+					</table>
+					<md-divider class="faded"></md-divider>
+					<table>
+						<tr>
+							<td class="label">E-Mail addresses</td>
+							<td class="value">
+								<span *ngFor="let emailAddress of contact.emailAddresses, let last = last">
+									{{emailAddress}}
+									<br *ngIf="!last">
+								</span>
+							</td>
+						</tr>
+					</table>
+					<md-divider class="faded"></md-divider>
+					<table>
+						<tr>
+							<td class="label">Town</td>
+							<td class="value">{{contact.town}}</td>
+						</tr>
+						<tr>
+							<td class="label">ZIP</td>
+							<td class="value">{{contact.zipCode}}</td>
+						</tr>
+						<tr>
+							<td class="label">Street</td>
+							<td class="value">{{contact.street}}</td>
+						</tr>
+					</table>
+				</md-card-content>
+			</md-card>
 		</md-card-content>
 	</md-card>
 	<md-card id="details">
