@@ -1,0 +1,88 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@angular2-material/list@2.0.0-alpha.6",
+        "scope": "@angular2-material",
+        "escapedName": "@angular2-material%2flist",
+        "name": "@angular2-material/list",
+        "rawSpec": "2.0.0-alpha.6",
+        "spec": "2.0.0-alpha.6",
+        "type": "version"
+      },
+      "/home/ptemel/temel.me"
+    ]
+  ],
+  "_from": "@angular2-material/list@2.0.0-alpha.6",
+  "_id": "@angular2-material/list@2.0.0-alpha.6",
+  "_inCache": true,
+  "_location": "/@angular2-material/list",
+  "_nodeVersion": "4.1.2",
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/list-2.0.0-alpha.6.tgz_1467300951558_0.041606459999457"
+  },
+  "_npmUser": {
+    "name": "angular2-material",
+    "email": "angular-core+npm@google.com"
+  },
+  "_npmVersion": "3.8.7",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@angular2-material/list@2.0.0-alpha.6",
+    "scope": "@angular2-material",
+    "escapedName": "@angular2-material%2flist",
+    "name": "@angular2-material/list",
+    "rawSpec": "2.0.0-alpha.6",
+    "spec": "2.0.0-alpha.6",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@angular2-material/list/-/list-2.0.0-alpha.6.tgz",
+  "_shasum": "e6cf6159d10ba7c1ded46b2d8abf7cfb2982f0c9",
+  "_shrinkwrap": null,
+  "_spec": "@angular2-material/list@2.0.0-alpha.6",
+  "_where": "/home/ptemel/temel.me",
+  "bugs": {
+    "url": "https://github.com/angular/material2/issues"
+  },
+  "dependencies": {},
+  "description": "Angular 2 Material list",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "e6cf6159d10ba7c1ded46b2d8abf7cfb2982f0c9",
+    "tarball": "https://registry.npmjs.org/@angular2-material/list/-/list-2.0.0-alpha.6.tgz"
+  },
+  "homepage": "https://github.com/angular/material2#readme",
+  "keywords": [
+    "angular",
+    "material",
+    "material design",
+    "components",
+    "list"
+  ],
+  "license": "MIT",
+  "main": "./list.js",
+  "maintainers": [
+    {
+      "name": "angular2-material",
+      "email": "angular-core+npm@google.com"
+    }
+  ],
+  "name": "@angular2-material/list",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "@angular2-material/core": "2.0.0-alpha.6"
+  },
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angular/material2.git"
+  },
+  "scripts": {},
+  "typings": "./list.d.ts",
+  "version": "2.0.0-alpha.6"
+}

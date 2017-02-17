@@ -1,0 +1,18 @@
+/**
+ * We separate transitions to be able to disable them in unit tests, by simply not loading this file.
+ */
+:host > .md-sidenav-backdrop.md-sidenav-shown {
+  -webkit-transition: background-color 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: background-color 400ms cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+:host > md-content {
+  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+:host > md-sidenav {
+  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1), -webkit-transform 400ms cubic-bezier(0.25, 0.8, 0.25, 1); }

@@ -1,0 +1,39 @@
+<md-card>
+	<md-card-content>
+		<md-tab-group>
+			<md-tab>
+				<template md-tab-label>
+					Pidgey calculator
+				</template>
+				<template md-tab-content>
+					<pokemongo-pidgeycalculator></pokemongo-pidgeycalculator>
+				</template>
+			</md-tab>
+			<md-tab>
+				<template md-tab-label>
+					Maps
+				</template>
+				<template md-tab-content>
+					<md-tab-group>
+						<md-tab *ngFor="let map of _maps">
+							<template md-tab-label>
+								{{map.name}}
+							</template>
+							<template md-tab-content>
+								<pokemongo-map [mapModel]="map"></pokemongo-map>
+							</template>
+						</md-tab>
+					</md-tab-group>
+				</template>
+			</md-tab>
+			<md-tab>
+				<template md-tab-label>
+					Database
+				</template>
+				<template md-tab-content>
+					WIP
+				</template>
+			</md-tab>
+		</md-tab-group>
+	</md-card-content>
+</md-card>

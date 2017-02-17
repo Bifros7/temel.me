@@ -1,0 +1,21 @@
+<div layout="column" class="md-inline-form">
+	<form (submit)="_registerUser(form)" #form="ngForm">
+		<table class="full-width" cellspacing="0"><tr>
+			<td><md-input class="full-width" required placeholder="Vorname" [(ngModel)]="_registerModel.firstName" name="firstName"></md-input></td>
+			<td><md-input class="full-width" required placeholder="Nachname" [(ngModel)]="_registerModel.lastName" name="lastName"></md-input></td>
+		</tr></table>
+		<md-input class="full-width" required placeholder="Straße" [(ngModel)]="_registerModel.street" name="street"></md-input>
+		<table class="full-width" cellspacing="0"><tr>
+			<td><md-input class="full-width" required placeholder="Ort" [(ngModel)]="_registerModel.town" name="town"></md-input></td>
+			<td><md-input class="full-width" required placeholder="PLZ" maxLength="5" [(ngModel)]="_registerModel.zipCode" name="zipCode"></md-input></td>
+		</tr></table>
+		<table class="full-width" cellspacing="0"><tr>
+			<td><md-input class="full-width" type="email" required placeholder="E-Mail" [(ngModel)]="_registerModel.email" name="email"></md-input></td>
+			<td><md-input class="full-width" type="password" required placeholder="Passwort" [(ngModel)]="_registerModel.password" name="password"></md-input></td>
+		</tr></table>
+		<div class="bottom-right">
+			<button md-raised-button type="reset">Zurücksetzen</button>
+			<button md-raised-button color="primary" type="submit">Abschicken</button>
+		</div>
+	</form>
+</div>
