@@ -3,11 +3,11 @@
 		<table class="full-width">
 			<tr>
 				<td><md-input-container class="full-width">
-					<input md-input required placeholder="Title" maxLength="60" formControlName="title" #titleInput>
+					<input mdInput required placeholder="Title" maxLength="60" formControlName="title" #titleInput>
 					<md-hint>{{titleInput.value.length}} / {{titleInput.maxLength}}</md-hint>
 				</md-input-container></td>
 				<td><md-input-container class="full-width">
-					<input md-input required placeholder="Price" formControlName="price">
+					<input mdInput required placeholder="Price" formControlName="price">
 					<span md-prefix>€&nbsp;</span>
 					<span md-suffix>.00</span>
 				</md-input-container></td>
@@ -16,13 +16,13 @@
 		<table class="full-width" cellspacing="0">
 			<tr>
 				<td><md-input-container class="full-width">
-					<input md-input required placeholder="Street" formControlName="street">
+					<input mdInput required placeholder="Street" formControlName="street">
 				</md-input-container></td>
 				<td><md-input-container class="full-width">
-					<input md-input required placeholder="City" formControlName="town">
+					<input mdInput required placeholder="City" formControlName="town">
 				</md-input-container></td>
 				<td><md-input-container class="full-width">
-					<input md-input required placeholder="ZIP Code" maxLength="5" formControlName="zipCode" #zipInput>
+					<input mdInput required placeholder="ZIP Code" maxLength="5" formControlName="zipCode" #zipInput>
 					<md-hint>{{zipInput.value.length}} / {{zipInput.maxLength}}</md-hint>
 				</md-input-container></td>
 			</tr>
@@ -30,10 +30,10 @@
 		<table class="full-width" cellspacing="0">
 			<tr>
 				<td><md-input-container class="full-width">
-					<input md-input type="email" required placeholder="E-Mail" formControlName="email">
+					<input mdInput type="email" required placeholder="E-Mail" formControlName="email">
 				</md-input-container></td>
 				<td><md-input-container class="full-width">
-					<input md-input type="password" required placeholder="Password" formControlName="password">
+					<input mdInput type="password" required placeholder="Password" formControlName="password">
 				</md-input-container></td>
 			</tr>
 		</table>

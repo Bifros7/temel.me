@@ -7,7 +7,7 @@ import { CompanyComponent, CustomerEditDialog } from './company.component';
 @NgModule({
 	imports: [
 		CommonModule,
-		MaterialModule.forRoot(),
+		MaterialModule,
 	],
 	declarations: [
 		CompanyComponent,

@@ -16,7 +16,7 @@ import { StadtanzeigerAnnouncementCreateComponent } from './announcement/create/
 	imports: [
 		CommonModule,
 		ReactiveFormsModule,
-		MaterialModule.forRoot(),
+		MaterialModule,
 	],
 	bootstrap: [
 		StadtanzeigerComponent,

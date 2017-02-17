@@ -25,7 +25,7 @@ import 'hammerjs';
 		CommonModule,
 		FormsModule,
 		HttpModule,
-		MaterialModule.forRoot(),
+		MaterialModule,
 
 		routing,
 

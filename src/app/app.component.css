@@ -1,4 +1,4 @@
-md-sidenav-layout {
+md-sidenav-container {
 	background: rgba(0,0,0,0.03);
 }
 
@@ -60,6 +60,6 @@ button[md-fab] {
 	float: right;
 }
 
-:host >>> md-tab-body.md-tab-body-active {
+:host >>> md-tab-body.mat-tab-body-active {
 	padding: 2px;
 }
