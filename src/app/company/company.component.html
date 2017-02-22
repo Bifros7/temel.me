@@ -165,7 +165,23 @@
 	<md-card id="details">
 		<md-card-title>Details</md-card-title>
 		<md-card-content>
-			foo
+			<md-tab-group>
+				<md-tab label="Addresses">
+					<md-list>
+						<div *ngIf="!addresses.length">No addresses have been registered yet.</div>
+						<div *ngFor="let address of addresses">
+							<md-list-item>
+								<md-icon md-list-avatar>contact_mail</md-icon>
+								<h4 md-line>{{address.type}}</h4>
+								<p md-line>{{address.town}}, {{address.zipCode}}, {{address.street}}</p>
+							</md-list-item>
+						</div>
+					</md-list>
+				</md-tab>
+				<md-tab label="Foobar">
+					foobar
+				</md-tab>
+			</md-tab-group>
 		</md-card-content>
 	</md-card>
 </div>

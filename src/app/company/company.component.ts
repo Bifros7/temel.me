@@ -39,6 +39,26 @@ export interface ICustomer {
 	styleUrls: ['./company.component.css']
 })
 export class CompanyComponent {
+	public addresses: Array<{street: string, town: string, type: string, zipCode: number}> = [
+		{
+			street: 'Hanns-Klemm-Straße 56',
+			town: 'Böblingen',
+			type: 'Main',
+			zipCode: 71034,
+		},
+		{
+			street: 'Hanns-Klemm-Straße 56',
+			town: 'Böblingen',
+			type: 'Delivery',
+			zipCode: 71034,
+		},
+		{
+			street: 'Hanns-Klemm-Straße 56',
+			town: 'Böblingen',
+			type: 'Fallback',
+			zipCode: 71034,
+		},
+	];
 	public contacts: Array<IContact> = [
 		{
 			emailAddresses: [
@@ -47,7 +67,7 @@ export class CompanyComponent {
 			],
 			fax: '',
 			name: 'Pascal Temel',
-			phone: '49 172 1234567',
+			phone: '+49 172 1234567',
 			street: 'Foostraße 51',
 			town: 'Grafenau',
 			zipCode: 71120,
@@ -59,7 +79,7 @@ export class CompanyComponent {
 			],
 			fax: '',
 			name: 'Pascal Temel',
-			phone: '49 172 1234567',
+			phone: '+49 172 1234567',
 			street: 'Foostraße 51',
 			town: 'Grafenau',
 			zipCode: 71120,
@@ -71,7 +91,7 @@ export class CompanyComponent {
 			],
 			fax: '',
 			name: 'Pascal Temel',
-			phone: '49 172 1234567',
+			phone: '+49 172 1234567',
 			street: 'Foostraße 51',
 			town: 'Grafenau',
 			zipCode: 71120,
@@ -83,7 +103,7 @@ export class CompanyComponent {
 			],
 			fax: '',
 			name: 'Pascal Temel',
-			phone: '49 172 1234567',
+			phone: '+49 172 1234567',
 			street: 'Foostraße 51',
 			town: 'Grafenau',
 			zipCode: 71120,
@@ -185,6 +205,16 @@ export class CompanyComponent {
 			<md-input-container class="full-width">
 				<input mdInput required placeholder="Street" formControlName="street">
 			</md-input-container>
+			<md-select placeholder="Price Group" formControlName="priceGroup">
+				<md-option *ngFor="let priceGroup of priceGroups" [value]="priceGroup.value">
+					{{priceGroup.viewValue}}
+				</md-option>
+			</md-select>
+			<md-select placeholder="Group" formControlName="group">
+				<md-option *ngFor="let group of groups" [value]="group.value">
+					{{group.viewValue}}
+				</md-option>
+			</md-select>
 			<md-dialog-actions>
 				<button md-button type="reset" (click)="dialogRef.close()">Close</button>
 				<button md-button type="submit">Save</button>
@@ -197,6 +227,18 @@ export class CompanyComponent {
 })
 export class CustomerEditDialog {
 	public form: FormGroup;
+	public groups: Array<{value: string, viewValue: string}> = [
+		{value: 'Consumer', viewValue: 'Consumer'},
+		{value: 'Reseller', viewValue: 'Reseller'},
+	];
+	public priceGroups: Array<{value: string, viewValue: string}> = [
+		{value: 'A', viewValue: 'A'},
+		{value: 'B', viewValue: 'B'},
+		{value: 'C', viewValue: 'C'},
+		{value: 'D', viewValue: 'D'},
+		{value: 'E', viewValue: 'E'},
+		{value: 'F', viewValue: 'F'},
+	];
 
 	constructor(
 		public dialogRef: MdDialogRef<CustomerEditDialog>,
