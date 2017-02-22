@@ -1,18 +1,22 @@
 #main-container {
 	display: flex;
 	width: 100%;
+	max-height: calc(100vh - 106px);
 }
 
 #customer {
+	overflow-y: auto;
 	flex: 1;
 }
 
 #contacts {
+	overflow-y: auto;
 	flex: 1;
 	margin-left: 4px;
 }
 
 #details {
+	overflow-y: auto;
 	flex: 3;
 	margin-left: 4px;
 }

@@ -1,4 +1,5 @@
 import { Component, ViewContainerRef } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MdDialog, MdDialogRef } from '@angular/material';
 
 export interface IContact {
@@ -150,7 +151,7 @@ export class CompanyComponent {
 	) { }
 
 	public editCustomer(): void {
-		this.customerEditDialogRef = this._dialog.open(CustomerEditDialog);
+		this.customerEditDialogRef = this._dialog.open(CustomerEditDialog, { data: this.customer, width: '600px' });
 
 		this.customerEditDialogRef.afterClosed().subscribe((result) => {
 			this._customerEditDialogCloseResult = result;
@@ -162,13 +163,66 @@ export class CompanyComponent {
 @Component({
 	selector: 'customer-edit-dialog',
 	template: `
-		<p>Not implemented yet</p>
-		<button md-button (click)="dialogRef.close('foo')">Close dialog</button>
+		<form [formGroup]="form" (ngSubmit)="dialogRef.close(form.value)">
+			<md-input-container class="full-width">
+				<input mdInput required placeholder="Name" formControlName="name">
+			</md-input-container>
+			<md-input-container class="full-width">
+				<input mdInput required placeholder="Phone" formControlName="phone">
+			</md-input-container>
+			<md-input-container class="full-width">
+				<input mdInput required placeholder="Fax" formControlName="fax">
+			</md-input-container>
+			<md-input-container class="full-width">
+				<input mdInput required placeholder="Website" formControlName="website">
+			</md-input-container>
+			<md-input-container class="full-width">
+				<input mdInput required placeholder="Town" formControlName="town">
+			</md-input-container>
+			<md-input-container class="full-width">
+				<input mdInput required placeholder="ZIP" formControlName="zipCode">
+			</md-input-container>
+			<md-input-container class="full-width">
+				<input mdInput required placeholder="Street" formControlName="street">
+			</md-input-container>
+			<md-dialog-actions>
+				<button md-button type="reset" (click)="dialogRef.close()">Close</button>
+				<button md-button type="submit">Save</button>
+			</md-dialog-actions>
+		</form>
 	`,
 	styles: [
 		'p { font-family: Roboto, "Helvetica Neue", sans-serif; }'
 	]
 })
 export class CustomerEditDialog {
-	constructor(public dialogRef: MdDialogRef<CustomerEditDialog>) { }
+	public form: FormGroup;
+
+	constructor(
+		public dialogRef: MdDialogRef<CustomerEditDialog>,
+		private _formBuilder: FormBuilder
+	) {
+		let customer: ICustomer = dialogRef.config.data;
+
+		this.form = this._formBuilder.group({
+			accountManagers: [customer.accountManagers],
+			clerk: [customer.clerk],
+			emailAddresses: [customer.emailAddresses],
+			employees: [customer.employees],
+			fax: [customer.fax],
+			group: [customer.group],
+			industry: [customer.industry],
+			location: [customer.location, Validators.required],
+			name: [customer.name, Validators.required],
+			number: [customer.number, Validators.required],
+			phone: [customer.phone, Validators.required],
+			priceGroup: [customer.priceGroup],
+			revenue: [customer.revenue],
+			street: [customer.street, Validators.required],
+			town: [customer.town, Validators.required],
+			website: [customer.website],
+			yearlySales: [customer.yearlySales],
+			zipCode: [customer.zipCode, Validators.required],
+		});
+	}
 }

@@ -1,6 +1,7 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { CompanyComponent, CustomerEditDialog } from './company.component';
 
@@ -8,6 +9,7 @@ import { CompanyComponent, CustomerEditDialog } from './company.component';
 	imports: [
 		CommonModule,
 		MaterialModule,
+		ReactiveFormsModule
 	],
 	declarations: [
 		CompanyComponent,
