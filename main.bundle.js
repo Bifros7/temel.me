@@ -70,6 +70,26 @@ var CompanyComponent = (function () {
     function CompanyComponent(_dialog, _viewContainerRef) {
         this._dialog = _dialog;
         this._viewContainerRef = _viewContainerRef;
+        this.addresses = [
+            {
+                street: 'Hanns-Klemm-Straße 56',
+                town: 'Böblingen',
+                type: 'Main',
+                zipCode: 71034,
+            },
+            {
+                street: 'Hanns-Klemm-Straße 56',
+                town: 'Böblingen',
+                type: 'Delivery',
+                zipCode: 71034,
+            },
+            {
+                street: 'Hanns-Klemm-Straße 56',
+                town: 'Böblingen',
+                type: 'Fallback',
+                zipCode: 71034,
+            },
+        ];
         this.contacts = [
             {
                 emailAddresses: [
@@ -78,7 +98,7 @@ var CompanyComponent = (function () {
                 ],
                 fax: '',
                 name: 'Pascal Temel',
-                phone: '49 172 1234567',
+                phone: '+49 172 1234567',
                 street: 'Foostraße 51',
                 town: 'Grafenau',
                 zipCode: 71120,
@@ -90,7 +110,7 @@ var CompanyComponent = (function () {
                 ],
                 fax: '',
                 name: 'Pascal Temel',
-                phone: '49 172 1234567',
+                phone: '+49 172 1234567',
                 street: 'Foostraße 51',
                 town: 'Grafenau',
                 zipCode: 71120,
@@ -102,7 +122,7 @@ var CompanyComponent = (function () {
                 ],
                 fax: '',
                 name: 'Pascal Temel',
-                phone: '49 172 1234567',
+                phone: '+49 172 1234567',
                 street: 'Foostraße 51',
                 town: 'Grafenau',
                 zipCode: 71120,
@@ -114,7 +134,7 @@ var CompanyComponent = (function () {
                 ],
                 fax: '',
                 name: 'Pascal Temel',
-                phone: '49 172 1234567',
+                phone: '+49 172 1234567',
                 street: 'Foostraße 51',
                 town: 'Grafenau',
                 zipCode: 71120,
@@ -197,6 +217,18 @@ var CustomerEditDialog = (function () {
     function CustomerEditDialog(dialogRef, _formBuilder) {
         this.dialogRef = dialogRef;
         this._formBuilder = _formBuilder;
+        this.groups = [
+            { value: 'Consumer', viewValue: 'Consumer' },
+            { value: 'Reseller', viewValue: 'Reseller' },
+        ];
+        this.priceGroups = [
+            { value: 'A', viewValue: 'A' },
+            { value: 'B', viewValue: 'B' },
+            { value: 'C', viewValue: 'C' },
+            { value: 'D', viewValue: 'D' },
+            { value: 'E', viewValue: 'E' },
+            { value: 'F', viewValue: 'F' },
+        ];
         var customer = dialogRef.config.data;
         this.form = this._formBuilder.group({
             accountManagers: [customer.accountManagers],
@@ -222,7 +254,7 @@ var CustomerEditDialog = (function () {
     CustomerEditDialog = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_2" /* Component */])({
             selector: 'customer-edit-dialog',
-            template: "\n\t\t<form [formGroup]=\"form\" (ngSubmit)=\"dialogRef.close(form.value)\">\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"Name\" formControlName=\"name\">\n\t\t\t</md-input-container>\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"Phone\" formControlName=\"phone\">\n\t\t\t</md-input-container>\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"Fax\" formControlName=\"fax\">\n\t\t\t</md-input-container>\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"Website\" formControlName=\"website\">\n\t\t\t</md-input-container>\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"Town\" formControlName=\"town\">\n\t\t\t</md-input-container>\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"ZIP\" formControlName=\"zipCode\">\n\t\t\t</md-input-container>\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"Street\" formControlName=\"street\">\n\t\t\t</md-input-container>\n\t\t\t<md-dialog-actions>\n\t\t\t\t<button md-button type=\"reset\" (click)=\"dialogRef.close()\">Close</button>\n\t\t\t\t<button md-button type=\"submit\">Save</button>\n\t\t\t</md-dialog-actions>\n\t\t</form>\n\t",
+            template: "\n\t\t<form [formGroup]=\"form\" (ngSubmit)=\"dialogRef.close(form.value)\">\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"Name\" formControlName=\"name\">\n\t\t\t</md-input-container>\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"Phone\" formControlName=\"phone\">\n\t\t\t</md-input-container>\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"Fax\" formControlName=\"fax\">\n\t\t\t</md-input-container>\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"Website\" formControlName=\"website\">\n\t\t\t</md-input-container>\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"Town\" formControlName=\"town\">\n\t\t\t</md-input-container>\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"ZIP\" formControlName=\"zipCode\">\n\t\t\t</md-input-container>\n\t\t\t<md-input-container class=\"full-width\">\n\t\t\t\t<input mdInput required placeholder=\"Street\" formControlName=\"street\">\n\t\t\t</md-input-container>\n\t\t\t<md-select placeholder=\"Price Group\" formControlName=\"priceGroup\">\n\t\t\t\t<md-option *ngFor=\"let priceGroup of priceGroups\" [value]=\"priceGroup.value\">\n\t\t\t\t\t{{priceGroup.viewValue}}\n\t\t\t\t</md-option>\n\t\t\t</md-select>\n\t\t\t<md-select placeholder=\"Group\" formControlName=\"group\">\n\t\t\t\t<md-option *ngFor=\"let group of groups\" [value]=\"group.value\">\n\t\t\t\t\t{{group.viewValue}}\n\t\t\t\t</md-option>\n\t\t\t</md-select>\n\t\t\t<md-dialog-actions>\n\t\t\t\t<button md-button type=\"reset\" (click)=\"dialogRef.close()\">Close</button>\n\t\t\t\t<button md-button type=\"submit\">Save</button>\n\t\t\t</md-dialog-actions>\n\t\t</form>\n\t",
             styles: [
                 'p { font-family: Roboto, "Helvetica Neue", sans-serif; }'
             ]
@@ -1011,7 +1043,7 @@ module.exports = "<md-sidenav-container fullscreen>\r\n\t<md-sidenav class=\"app
 /***/ 824:
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"main-container\">\r\n\t<md-card id=\"customer\">\r\n\t\t<md-card-title>Customer</md-card-title>\r\n\t\t<md-card-content>\r\n\t\t\t<table>\r\n\t\t\t\t<tr mdTooltip=\"Customer number\">\r\n\t\t\t\t\t<td class=\"label\">#</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.number}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Name</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.name}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t<table>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Phone</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.phone}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Fax</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.fax}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t<table>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Website</td>\r\n\t\t\t\t\t<td class=\"value\"><a href=\"{{customer.website}}\">{{customer.website}}</a></td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">E-Mail addresses</td>\r\n\t\t\t\t\t<td class=\"value\">\r\n\t\t\t\t\t\t<span *ngFor=\"let emailAddress of customer.emailAddresses, let last = last\">\r\n\t\t\t\t\t\t\t{{emailAddress}}\r\n\t\t\t\t\t\t\t<br *ngIf=\"!last\">\r\n\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t<table>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Group</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.group}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Price group</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.priceGroup}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Industry sector</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.industry}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Yearly revenue</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.revenue}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Amount of employees</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.employees}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Account managers</td>\r\n\t\t\t\t\t<td class=\"value\">\r\n\t\t\t\t\t\t<span *ngFor=\"let accountManager of customer.accountManagers, let last = last\" mdTooltip=\"{{accountManager.responsibility}}\">\r\n\t\t\t\t\t\t\t{{accountManager.name}}\r\n\t\t\t\t\t\t\t<br *ngIf=\"!last\">\r\n\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t<table>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Location</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.location}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Clerk</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.clerk}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t<table>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Town</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.town}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">ZIP</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.zipCode}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Street</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.street}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t<table>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<th colspan=\"2\" class=\"title\">Yearly sales</th>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr *ngFor=\"let year of customer.yearlySales\">\r\n\t\t\t\t\t<td class=\"label\">{{year.year}}</td>\r\n\t\t\t\t\t<td class=\"value\">{{year.sales | currency:'EUR':true}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t</md-card-content>\r\n\t\t<md-card-actions>\r\n\t\t\t<button md-button (click)=\"editCustomer()\" [disabled]=\"customerEditDialogRef\">EDIT</button>\r\n\t\t</md-card-actions>\r\n\t</md-card>\r\n\t<md-card id=\"contacts\">\r\n\t\t<md-card-title>Contacts</md-card-title>\r\n\t\t<md-card-content>\r\n\t\t\t<div *ngFor=\"let contact of contacts, let last = last\">\r\n\t\t\t\t<md-card>\r\n\t\t\t\t\t<md-card-title>{{contact.name}}</md-card-title>\r\n\t\t\t\t\t<md-card-content>\r\n\t\t\t\t\t\t<table>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td class=\"label\">Phone</td>\r\n\t\t\t\t\t\t\t\t<td class=\"value\">{{contact.phone}}</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td class=\"label\">Fax</td>\r\n\t\t\t\t\t\t\t\t<td class=\"value\">{{contact.fax}}</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t\t\t\t<table>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td class=\"label\">E-Mail addresses</td>\r\n\t\t\t\t\t\t\t\t<td class=\"value\">\r\n\t\t\t\t\t\t\t\t\t<span *ngFor=\"let emailAddress of contact.emailAddresses, let last = last\">\r\n\t\t\t\t\t\t\t\t\t\t{{emailAddress}}\r\n\t\t\t\t\t\t\t\t\t\t<br *ngIf=\"!last\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t\t\t\t<table>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td class=\"label\">Town</td>\r\n\t\t\t\t\t\t\t\t<td class=\"value\">{{contact.town}}</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td class=\"label\">ZIP</td>\r\n\t\t\t\t\t\t\t\t<td class=\"value\">{{contact.zipCode}}</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td class=\"label\">Street</td>\r\n\t\t\t\t\t\t\t\t<td class=\"value\">{{contact.street}}</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t</md-card-content>\r\n\t\t\t\t</md-card>\r\n\t\t\t\t<br *ngIf=!last>\r\n\t\t\t</div>\r\n\t\t</md-card-content>\r\n\t</md-card>\r\n\t<md-card id=\"details\">\r\n\t\t<md-card-title>Details</md-card-title>\r\n\t\t<md-card-content>\r\n\t\t\tfoo\r\n\t\t</md-card-content>\r\n\t</md-card>\r\n</div>\r\n"
+module.exports = "<div id=\"main-container\">\r\n\t<md-card id=\"customer\">\r\n\t\t<md-card-title>Customer</md-card-title>\r\n\t\t<md-card-content>\r\n\t\t\t<table>\r\n\t\t\t\t<tr mdTooltip=\"Customer number\">\r\n\t\t\t\t\t<td class=\"label\">#</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.number}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Name</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.name}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t<table>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Phone</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.phone}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Fax</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.fax}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t<table>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Website</td>\r\n\t\t\t\t\t<td class=\"value\"><a href=\"{{customer.website}}\">{{customer.website}}</a></td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">E-Mail addresses</td>\r\n\t\t\t\t\t<td class=\"value\">\r\n\t\t\t\t\t\t<span *ngFor=\"let emailAddress of customer.emailAddresses, let last = last\">\r\n\t\t\t\t\t\t\t{{emailAddress}}\r\n\t\t\t\t\t\t\t<br *ngIf=\"!last\">\r\n\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t<table>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Group</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.group}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Price group</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.priceGroup}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Industry sector</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.industry}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Yearly revenue</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.revenue}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Amount of employees</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.employees}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Account managers</td>\r\n\t\t\t\t\t<td class=\"value\">\r\n\t\t\t\t\t\t<span *ngFor=\"let accountManager of customer.accountManagers, let last = last\" mdTooltip=\"{{accountManager.responsibility}}\">\r\n\t\t\t\t\t\t\t{{accountManager.name}}\r\n\t\t\t\t\t\t\t<br *ngIf=\"!last\">\r\n\t\t\t\t\t\t</span>\r\n\t\t\t\t\t</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t<table>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Location</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.location}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Clerk</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.clerk}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t<table>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Town</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.town}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">ZIP</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.zipCode}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<td class=\"label\">Street</td>\r\n\t\t\t\t\t<td class=\"value\">{{customer.street}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t<table>\r\n\t\t\t\t<tr>\r\n\t\t\t\t\t<th colspan=\"2\" class=\"title\">Yearly sales</th>\r\n\t\t\t\t</tr>\r\n\t\t\t\t<tr *ngFor=\"let year of customer.yearlySales\">\r\n\t\t\t\t\t<td class=\"label\">{{year.year}}</td>\r\n\t\t\t\t\t<td class=\"value\">{{year.sales | currency:'EUR':true}}</td>\r\n\t\t\t\t</tr>\r\n\t\t\t</table>\r\n\t\t</md-card-content>\r\n\t\t<md-card-actions>\r\n\t\t\t<button md-button (click)=\"editCustomer()\" [disabled]=\"customerEditDialogRef\">EDIT</button>\r\n\t\t</md-card-actions>\r\n\t</md-card>\r\n\t<md-card id=\"contacts\">\r\n\t\t<md-card-title>Contacts</md-card-title>\r\n\t\t<md-card-content>\r\n\t\t\t<div *ngFor=\"let contact of contacts, let last = last\">\r\n\t\t\t\t<md-card>\r\n\t\t\t\t\t<md-card-title>{{contact.name}}</md-card-title>\r\n\t\t\t\t\t<md-card-content>\r\n\t\t\t\t\t\t<table>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td class=\"label\">Phone</td>\r\n\t\t\t\t\t\t\t\t<td class=\"value\">{{contact.phone}}</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td class=\"label\">Fax</td>\r\n\t\t\t\t\t\t\t\t<td class=\"value\">{{contact.fax}}</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t\t\t\t<table>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td class=\"label\">E-Mail addresses</td>\r\n\t\t\t\t\t\t\t\t<td class=\"value\">\r\n\t\t\t\t\t\t\t\t\t<span *ngFor=\"let emailAddress of contact.emailAddresses, let last = last\">\r\n\t\t\t\t\t\t\t\t\t\t{{emailAddress}}\r\n\t\t\t\t\t\t\t\t\t\t<br *ngIf=\"!last\">\r\n\t\t\t\t\t\t\t\t\t</span>\r\n\t\t\t\t\t\t\t\t</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t<md-divider class=\"faded\"></md-divider>\r\n\t\t\t\t\t\t<table>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td class=\"label\">Town</td>\r\n\t\t\t\t\t\t\t\t<td class=\"value\">{{contact.town}}</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td class=\"label\">ZIP</td>\r\n\t\t\t\t\t\t\t\t<td class=\"value\">{{contact.zipCode}}</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t\t<tr>\r\n\t\t\t\t\t\t\t\t<td class=\"label\">Street</td>\r\n\t\t\t\t\t\t\t\t<td class=\"value\">{{contact.street}}</td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t</md-card-content>\r\n\t\t\t\t</md-card>\r\n\t\t\t\t<br *ngIf=!last>\r\n\t\t\t</div>\r\n\t\t</md-card-content>\r\n\t</md-card>\r\n\t<md-card id=\"details\">\r\n\t\t<md-card-title>Details</md-card-title>\r\n\t\t<md-card-content>\r\n\t\t\t<md-tab-group>\r\n\t\t\t\t<md-tab label=\"Addresses\">\r\n\t\t\t\t\t<md-list>\r\n\t\t\t\t\t\t<div *ngIf=\"!addresses.length\">No addresses have been registered yet.</div>\r\n\t\t\t\t\t\t<div *ngFor=\"let address of addresses\">\r\n\t\t\t\t\t\t\t<md-list-item>\r\n\t\t\t\t\t\t\t\t<md-icon md-list-avatar>contact_mail</md-icon>\r\n\t\t\t\t\t\t\t\t<h4 md-line>{{address.type}}</h4>\r\n\t\t\t\t\t\t\t\t<p md-line>{{address.town}}, {{address.zipCode}}, {{address.street}}</p>\r\n\t\t\t\t\t\t\t</md-list-item>\r\n\t\t\t\t\t\t</div>\r\n\t\t\t\t\t</md-list>\r\n\t\t\t\t</md-tab>\r\n\t\t\t\t<md-tab label=\"Foobar\">\r\n\t\t\t\t\tfoobar\r\n\t\t\t\t</md-tab>\r\n\t\t\t</md-tab-group>\r\n\t\t</md-card-content>\r\n\t</md-card>\r\n</div>\r\n"
 
 /***/ }),
 
