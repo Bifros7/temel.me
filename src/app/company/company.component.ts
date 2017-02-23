@@ -1,6 +1,6 @@
 import { Component, ViewContainerRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MdDialog, MdDialogRef } from '@angular/material';
+import { MdDialog, MdDialogRef, MdSnackBar } from '@angular/material';
 
 export interface IContact {
 	emailAddresses: Array<string>;
@@ -163,10 +163,10 @@ export class CompanyComponent {
 		],
 	}
 	public customerEditDialogRef: MdDialogRef<CustomerEditDialog>;
-	private _customerEditDialogCloseResult: string;
 
 	public constructor(
 		private _dialog: MdDialog,
+		private _snackBar: MdSnackBar,
 		private _viewContainerRef: ViewContainerRef
 	) { }
 
@@ -174,7 +174,12 @@ export class CompanyComponent {
 		this.customerEditDialogRef = this._dialog.open(CustomerEditDialog, { data: this.customer, width: '600px' });
 
 		this.customerEditDialogRef.afterClosed().subscribe((result) => {
-			this._customerEditDialogCloseResult = result;
+			if (typeof(result) === 'object') {
+				this.customer = result;
+				this._snackBar.open('Changes were saved', null, {
+					duration: 3000,
+				});
+			}
 			this.customerEditDialogRef = null;
 		});
 	}
