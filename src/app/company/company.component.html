@@ -115,7 +115,7 @@
 	<md-card id="contacts">
 		<md-card-title>Contacts</md-card-title>
 		<md-card-content>
-			<div *ngFor="let contact of contacts, let last = last">
+			<div *ngFor="let contact of contacts, let i = index, let last = last">
 				<md-card>
 					<md-card-title>{{contact.name}}</md-card-title>
 					<md-card-content>
@@ -157,6 +157,9 @@
 							</tr>
 						</table>
 					</md-card-content>
+					<md-card-actions>
+						<button md-button (click)="editContact(i)" [disabled]="contactEditDialogRef">EDIT</button>
+					</md-card-actions>
 				</md-card>
 				<br *ngIf=!last>
 			</div>

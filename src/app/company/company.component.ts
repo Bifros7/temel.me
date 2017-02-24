@@ -162,6 +162,7 @@ export class CompanyComponent {
 			},
 		],
 	}
+	public contactEditDialogRef: MdDialogRef<ContactEditDialog>;
 	public customerEditDialogRef: MdDialogRef<CustomerEditDialog>;
 
 	public constructor(
@@ -181,6 +182,20 @@ export class CompanyComponent {
 				});
 			}
 			this.customerEditDialogRef = null;
+		});
+	}
+
+	public editContact(contactIndex: number): void {
+		this.contactEditDialogRef = this._dialog.open(ContactEditDialog, { data: this.contacts[contactIndex], width: '600px' });
+
+		this.contactEditDialogRef.afterClosed().subscribe((result) => {
+			if (typeof(result) === 'object') {
+				this.contacts[contactIndex] = result;
+				this._snackBar.open('Changes were saved', null, {
+					duration: 3000,
+				});
+			}
+			this.contactEditDialogRef = null;
 		});
 	}
 }
@@ -270,6 +285,59 @@ export class CustomerEditDialog {
 			website: [customer.website],
 			yearlySales: [customer.yearlySales],
 			zipCode: [customer.zipCode, Validators.required],
+		});
+	}
+}
+
+@Component({
+	selector: 'contact-edit-dialog',
+	template: `
+		<form [formGroup]="form" (ngSubmit)="dialogRef.close(form.value)">
+			<md-input-container class="full-width">
+				<input mdInput required placeholder="Name" formControlName="name">
+			</md-input-container>
+			<md-input-container class="full-width">
+				<input mdInput required placeholder="Phone" formControlName="phone">
+			</md-input-container>
+			<md-input-container class="full-width">
+				<input mdInput required placeholder="Fax" formControlName="fax">
+			</md-input-container>
+			<md-input-container class="full-width">
+				<input mdInput required placeholder="Town" formControlName="town">
+			</md-input-container>
+			<md-input-container class="full-width">
+				<input mdInput required placeholder="ZIP" formControlName="zipCode">
+			</md-input-container>
+			<md-input-container class="full-width">
+				<input mdInput required placeholder="Street" formControlName="street">
+			</md-input-container>
+			<md-dialog-actions>
+				<button md-button type="reset" (click)="dialogRef.close()">Close</button>
+				<button md-button type="submit">Save</button>
+			</md-dialog-actions>
+		</form>
+	`,
+	styles: [
+		'p { font-family: Roboto, "Helvetica Neue", sans-serif; }'
+	]
+})
+export class ContactEditDialog {
+	public form: FormGroup;
+
+	constructor(
+		public dialogRef: MdDialogRef<ContactEditDialog>,
+		private _formBuilder: FormBuilder
+	) {
+		let contact: IContact = dialogRef.config.data;
+
+		this.form = this._formBuilder.group({
+			emailAddresses: [contact.emailAddresses],
+			fax: [contact.fax, Validators.required],
+			name: [contact.name, Validators.required],
+			phone: [contact.phone, Validators.required],
+			street: [contact.street, Validators.required],
+			town: [contact.town, Validators.required],
+			zipCode: [contact.zipCode, Validators.required],
 		});
 	}
 }

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MaterialModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 
-import { CompanyComponent, CustomerEditDialog } from './company.component';
+import { CompanyComponent, ContactEditDialog, CustomerEditDialog } from './company.component';
 
 @NgModule({
 	imports: [
@@ -13,12 +13,14 @@ import { CompanyComponent, CustomerEditDialog } from './company.component';
 	],
 	declarations: [
 		CompanyComponent,
+		ContactEditDialog,
 		CustomerEditDialog,
 	],
 	bootstrap: [
 		CompanyComponent,
 	],
 	entryComponents: [
+		ContactEditDialog,
 		CustomerEditDialog,
 	],
 	providers: [
