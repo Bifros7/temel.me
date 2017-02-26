@@ -25,6 +25,12 @@ export class AppComponent {
 				),
 				new NavigationitemModel(
 					[],
+					'Conway\'s Game of Life',
+					'play_circle_filled',
+					'/conway'
+				),
+				new NavigationitemModel(
+					[],
 					'Stadtanzeiger',
 					'assignment',
 					'/stadtanzeiger'
