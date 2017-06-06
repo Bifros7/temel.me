@@ -40,7 +40,7 @@ button[md-fab] {
 	font-size: 20px;
 	font-weight: 400;
 	height: 64px;
-	padding-left: 20px;
+	padding-left: 16px;
 }
 
 :host >>> * {
@@ -58,8 +58,4 @@ button[md-fab] {
 
 :host >>> .float-right {
 	float: right;
-}
-
-:host >>> md-tab-body.mat-tab-body-active {
-	padding: 2px;
 }
