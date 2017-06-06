@@ -1,6 +1,6 @@
-import { Component, ViewContainerRef } from '@angular/core';
+import { Component, Inject, ViewContainerRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MdDialog, MdDialogRef, MdSnackBar } from '@angular/material';
+import { MdDialog, MdDialogRef, MdSnackBar, MD_DIALOG_DATA } from '@angular/material';
 
 export interface IContact {
 	emailAddresses: Array<string>;
@@ -262,10 +262,9 @@ export class CustomerEditDialog {
 
 	constructor(
 		public dialogRef: MdDialogRef<CustomerEditDialog>,
-		private _formBuilder: FormBuilder
+		private _formBuilder: FormBuilder,
+		@Inject(MD_DIALOG_DATA) public customer: ICustomer
 	) {
-		let customer: ICustomer = dialogRef.config.data;
-
 		this.form = this._formBuilder.group({
 			accountManagers: [customer.accountManagers],
 			clerk: [customer.clerk],
@@ -326,10 +325,9 @@ export class ContactEditDialog {
 
 	constructor(
 		public dialogRef: MdDialogRef<ContactEditDialog>,
-		private _formBuilder: FormBuilder
+		private _formBuilder: FormBuilder,
+		@Inject(MD_DIALOG_DATA) public contact: ICustomer
 	) {
-		let contact: IContact = dialogRef.config.data;
-
 		this.form = this._formBuilder.group({
 			emailAddresses: [contact.emailAddresses],
 			fax: [contact.fax, Validators.required],
