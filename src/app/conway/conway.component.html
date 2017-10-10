@@ -1,19 +1,19 @@
-<md-card>
-	<md-card-content>
+<mat-card>
+	<mat-card-content>
 		<div class="row" *ngFor="let row of rows, let rowIndex = index, let firstRow = first">
 			<div class="cell" [class.first-row]="firstRow" [class.first-cell]="firstCell" [class.alive]="cell.alive" *ngFor="let cell of row.cells, let cellIndex = index, let firstCell = first"></div>
 		</div>
-	</md-card-content>
-	<md-card-actions>
+	</mat-card-content>
+	<mat-card-actions>
 		Iteration: {{iterationCount}}
-		<button md-button (click)="initializeCells()">INITIALIZE</button>
-		<button md-button (click)="randomizeCells()">RANDOMIZE</button>
-		<button md-button (click)="calculateNextIteration()">NEXT ITERATION</button>
-		<button md-button (click)="start()" [disabled]="iterationSubscription">START</button>
-		<button md-button (click)="stop()"  [disabled]="!iterationSubscription">STOP</button>
-		<md-input-container>
-			<input mdInput required type="number" placeholder="Delay" [disabled]="iterationSubscription" [(ngModel)]="iterationTime">
-			<span md-suffix>seconds</span>
-		</md-input-container>
-	</md-card-actions>
-</md-card>
+		<button mat-button (click)="initializeCells()">INITIALIZE</button>
+		<button mat-button (click)="randomizeCells()">RANDOMIZE</button>
+		<button mat-button (click)="calculateNextIteration()">NEXT ITERATION</button>
+		<button mat-button (click)="start()" [disabled]="iterationSubscription">START</button>
+		<button mat-button (click)="stop()"  [disabled]="!iterationSubscription">STOP</button>
+		<mat-input-container>
+			<input matInput required type="number" placeholder="Delay" [disabled]="iterationSubscription" [(ngModel)]="iterationTime">
+			<span mat-suffix>seconds</span>
+		</mat-input-container>
+	</mat-card-actions>
+</mat-card>

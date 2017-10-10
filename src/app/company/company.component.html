@@ -1,31 +1,31 @@
 <div id="main-container">
-	<md-card id="customer">
-		<md-card-title>Customer</md-card-title>
-		<md-card-content>
+	<mat-card id="customer">
+		<mat-card-title>Customer</mat-card-title>
+		<mat-card-content>
 			<table>
-				<tr mdTooltip="Customer number: {{customer.number}}">
+				<tr matTooltip="Customer number: {{customer.number}}">
 					<td class="label">#</td>
 					<td class="value">{{customer.number}}</td>
 				</tr>
-				<tr mdTooltip="Name: {{customer.name}}">
+				<tr matTooltip="Name: {{customer.name}}">
 					<td class="label">Name</td>
 					<td class="value">{{customer.name}}</td>
 				</tr>
 			</table>
-			<md-divider class="faded"></md-divider>
+			<mat-divider class="faded"></mat-divider>
 			<table>
-				<tr mdTooltip="Phone: {{customer.phone}}">
+				<tr matTooltip="Phone: {{customer.phone}}">
 					<td class="label">Phone</td>
 					<td class="value">{{customer.phone}}</td>
 				</tr>
-				<tr mdTooltip="Fax: {{customer.fax}}">
+				<tr matTooltip="Fax: {{customer.fax}}">
 					<td class="label">Fax</td>
 					<td class="value">{{customer.fax}}</td>
 				</tr>
 			</table>
-			<md-divider class="faded"></md-divider>
+			<mat-divider class="faded"></mat-divider>
 			<table>
-				<tr mdTooltip="Website: {{customer.website}}">
+				<tr matTooltip="Website: {{customer.website}}">
 					<td class="label">Website</td>
 					<td class="value"><a href="{{(customer.website ? (customer.website.match('^http://') ? customer.website : 'http://' + customer.website) : '')}}">{{customer.website}}</a></td>
 				</tr>
@@ -33,158 +33,158 @@
 					<td class="label">E-Mail addresses</td>
 					<td class="value">
 						<span *ngFor="let emailAddress of customer.emailAddresses, let last = last">
-							<a href="mailto:{{emailAddress}}" mdTooltip="{{emailAddress}}">{{emailAddress}}</a>
+							<a href="mailto:{{emailAddress}}" matTooltip="{{emailAddress}}">{{emailAddress}}</a>
 							<br *ngIf="!last">
 						</span>
 					</td>
 				</tr>
 			</table>
-			<md-divider class="faded"></md-divider>
+			<mat-divider class="faded"></mat-divider>
 			<table>
-				<tr mdTooltip="Group: {{customer.group}}">
+				<tr matTooltip="Group: {{customer.group}}">
 					<td class="label">Group</td>
 					<td class="value">{{customer.group}}</td>
 				</tr>
-				<tr mdTooltip="Price group: {{customer.priceGroup}}">
+				<tr matTooltip="Price group: {{customer.priceGroup}}">
 					<td class="label">Price group</td>
 					<td class="value">{{customer.priceGroup}}</td>
 				</tr>
-				<tr mdTooltip="Industry sector: {{customer.industry}}">
+				<tr matTooltip="Industry sector: {{customer.industry}}">
 					<td class="label">Industry sector</td>
 					<td class="value">{{customer.industry}}</td>
 				</tr>
-				<tr mdTooltip="Yearly revenue: {{customer.revenue}}">
+				<tr matTooltip="Yearly revenue: {{customer.revenue}}">
 					<td class="label">Yearly revenue</td>
 					<td class="value">{{customer.revenue}}</td>
 				</tr>
-				<tr mdTooltip="Amount of employees: {{customer.employees}}">
+				<tr matTooltip="Amount of employees: {{customer.employees}}">
 					<td class="label">Amount of employees</td>
 					<td class="value">{{customer.employees}}</td>
 				</tr>
 				<tr>
 					<td class="label">Account managers</td>
 					<td class="value">
-						<span *ngFor="let accountManager of customer.accountManagers, let last = last" mdTooltip="{{accountManager.responsibility}}">
+						<span *ngFor="let accountManager of customer.accountManagers, let last = last" matTooltip="{{accountManager.responsibility}}">
 							{{accountManager.name}}
 							<br *ngIf="!last">
 						</span>
 					</td>
 				</tr>
 			</table>
-			<md-divider class="faded"></md-divider>
+			<mat-divider class="faded"></mat-divider>
 			<table>
-				<tr mdTooltip="Location: {{customer.location}}">
+				<tr matTooltip="Location: {{customer.location}}">
 					<td class="label">Location</td>
 					<td class="value">{{customer.location}}</td>
 				</tr>
-				<tr mdTooltip="Clerk: {{customer.clerk}}">
+				<tr matTooltip="Clerk: {{customer.clerk}}">
 					<td class="label">Clerk</td>
 					<td class="value">{{customer.clerk}}</td>
 				</tr>
 			</table>
-			<md-divider class="faded"></md-divider>
+			<mat-divider class="faded"></mat-divider>
 			<table>
-				<tr mdTooltip="Town: {{customer.town}}">
+				<tr matTooltip="Town: {{customer.town}}">
 					<td class="label">Town</td>
 					<td class="value">{{customer.town}}</td>
 				</tr>
-				<tr mdTooltip="ZIP: {{customer.zipCode}}">
+				<tr matTooltip="ZIP: {{customer.zipCode}}">
 					<td class="label">ZIP</td>
 					<td class="value">{{customer.zipCode}}</td>
 				</tr>
-				<tr mdTooltip="Street: {{customer.street}}">
+				<tr matTooltip="Street: {{customer.street}}">
 					<td class="label">Street</td>
 					<td class="value">{{customer.street}}</td>
 				</tr>
 			</table>
-			<md-divider class="faded"></md-divider>
+			<mat-divider class="faded"></mat-divider>
 			<table>
 				<tr>
 					<th colspan="2" class="title">Yearly sales</th>
 				</tr>
 				<tr *ngFor="let year of customer.yearlySales">
 					<td class="label">{{year.year}}</td>
-					<td class="value"  mdTooltip="{{year.sales | currency:'EUR':true}}">{{year.sales | currency:'EUR':true}}</td>
+					<td class="value"  matTooltip="{{year.sales | currency:'EUR':true}}">{{year.sales | currency:'EUR':true}}</td>
 				</tr>
 			</table>
-		</md-card-content>
-		<md-card-actions>
-			<button md-button (click)="editCustomer()" [disabled]="customerEditDialogRef">EDIT</button>
-		</md-card-actions>
-	</md-card>
-	<md-card id="contacts">
-		<md-card-title>Contacts</md-card-title>
-		<md-card-content>
+		</mat-card-content>
+		<mat-card-actions>
+			<button mat-button (click)="editCustomer()" [disabled]="customerEditDialogRef">EDIT</button>
+		</mat-card-actions>
+	</mat-card>
+	<mat-card id="contacts">
+		<mat-card-title>Contacts</mat-card-title>
+		<mat-card-content>
 			<div *ngFor="let contact of contacts, let i = index, let last = last">
-				<md-card>
-					<md-card-title>{{contact.name}}</md-card-title>
-					<md-card-content>
+				<mat-card>
+					<mat-card-title>{{contact.name}}</mat-card-title>
+					<mat-card-content>
 						<table>
-							<tr mdTooltip="Phone: {{contact.phone}}">
+							<tr matTooltip="Phone: {{contact.phone}}">
 								<td class="label">Phone</td>
 								<td class="value">{{contact.phone}}</td>
 							</tr>
-							<tr mdTooltip="Fax: {{contact.fax}}">
+							<tr matTooltip="Fax: {{contact.fax}}">
 								<td class="label">Fax</td>
 								<td class="value">{{contact.fax}}</td>
 							</tr>
 						</table>
-						<md-divider class="faded"></md-divider>
+						<mat-divider class="faded"></mat-divider>
 						<table>
 							<tr>
 								<td class="label">E-Mail addresses</td>
 								<td class="value">
-									<span *ngFor="let emailAddress of contact.emailAddresses, let last = last"  mdTooltip="{{emailAddress}}">
+									<span *ngFor="let emailAddress of contact.emailAddresses, let last = last"  matTooltip="{{emailAddress}}">
 										{{emailAddress}}
 										<br *ngIf="!last">
 									</span>
 								</td>
 							</tr>
 						</table>
-						<md-divider class="faded"></md-divider>
+						<mat-divider class="faded"></mat-divider>
 						<table>
-							<tr mdTooltip="Town: {{contact.town}}">
+							<tr matTooltip="Town: {{contact.town}}">
 								<td class="label">Town</td>
 								<td class="value">{{contact.town}}</td>
 							</tr>
-							<tr mdTooltip="ZIP: {{contact.zipCode}}">
+							<tr matTooltip="ZIP: {{contact.zipCode}}">
 								<td class="label">ZIP</td>
 								<td class="value">{{contact.zipCode}}</td>
 							</tr>
-							<tr mdTooltip="Street: {{contact.street}}">
+							<tr matTooltip="Street: {{contact.street}}">
 								<td class="label">Street</td>
 								<td class="value">{{contact.street}}</td>
 							</tr>
 						</table>
-					</md-card-content>
-					<md-card-actions>
-						<button md-button (click)="editContact(i)" [disabled]="contactEditDialogRef">EDIT</button>
-					</md-card-actions>
-				</md-card>
+					</mat-card-content>
+					<mat-card-actions>
+						<button mat-button (click)="editContact(i)" [disabled]="contactEditDialogRef">EDIT</button>
+					</mat-card-actions>
+				</mat-card>
 				<br *ngIf=!last>
 			</div>
-		</md-card-content>
-	</md-card>
-	<md-card id="details">
-		<md-card-title>Details</md-card-title>
-		<md-card-content>
-			<md-tab-group>
-				<md-tab label="Addresses">
-					<md-list>
+		</mat-card-content>
+	</mat-card>
+	<mat-card id="details">
+		<mat-card-title>Details</mat-card-title>
+		<mat-card-content>
+			<mat-tab-group>
+				<mat-tab label="Addresses">
+					<mat-list>
 						<div *ngIf="!addresses.length">No addresses have been registered yet.</div>
 						<div *ngFor="let address of addresses">
-							<md-list-item>
-								<md-icon md-list-avatar>contact_mail</md-icon>
-								<h4 md-line>{{address.type}}</h4>
-								<p md-line>{{address.town}}, {{address.zipCode}}, {{address.street}}</p>
-							</md-list-item>
+							<mat-list-item>
+								<mat-icon mat-list-avatar>contact_mail</mat-icon>
+								<h4 mat-line>{{address.type}}</h4>
+								<p mat-line>{{address.town}}, {{address.zipCode}}, {{address.street}}</p>
+							</mat-list-item>
 						</div>
-					</md-list>
-				</md-tab>
-				<md-tab label="Foobar">
+					</mat-list>
+				</mat-tab>
+				<mat-tab label="Foobar">
 					foobar
-				</md-tab>
-			</md-tab-group>
-		</md-card-content>
-	</md-card>
+				</mat-tab>
+			</mat-tab-group>
+		</mat-card-content>
+	</mat-card>
 </div>

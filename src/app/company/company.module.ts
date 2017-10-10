@@ -1,6 +1,6 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MaterialModule } from '@angular/material';
+import { MaterialModule } from '../material.module';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { CompanyComponent, ContactEditDialog, CustomerEditDialog } from './company.component';

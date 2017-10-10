@@ -1,14 +1,14 @@
-<md-sidenav-container fullscreen>
-	<md-sidenav class="app-sidenav no-select" #sidenav>
+<mat-sidenav-container fullscreen>
+	<mat-sidenav class="app-sidenav no-select" #sidenav>
 		<div class="banner">
-			<button md-icon-button (click)="sidenav.close()">
-				<md-icon>menu</md-icon>
+			<button mat-icon-button (click)="sidenav.close()">
+				<mat-icon>menu</mat-icon>
 			</button>
 			<span>Temel.me</span>
 		</div>
-		<md-divider class="faded"></md-divider>
-		<md-tab-group>
-			<md-tab label="Navigation">
+		<mat-divider class="faded"></mat-divider>
+		<mat-tab-group>
+			<mat-tab label="Navigation">
 				<navigationitem *ngFor="let view of views, let first = first"
 					class="no-select"
 					[first]="first"
@@ -16,45 +16,45 @@
 					[level]="1"
 					(linkClicked)="sidenav.close()"
 				></navigationitem>
-			</md-tab>
-			<md-tab label="Sidebar">
+			</mat-tab>
+			<mat-tab label="Sidebar">
 				Content
-			</md-tab>
-		</md-tab-group>
-	</md-sidenav>
+			</mat-tab>
+		</mat-tab-group>
+	</mat-sidenav>
 
-	<md-toolbar color="primary" class="no-select">
-		<button md-icon-button (click)="sidenav.open()">
-			<md-icon>menu</md-icon>
+	<mat-toolbar color="primary" class="no-select">
+		<button mat-icon-button (click)="sidenav.open()">
+			<mat-icon>menu</mat-icon>
 		</button>
 		<span>Temel.me</span>
 
 		<span class="fill-remaining-space"></span>
 
 		<span class="overflow-hidden">
-			<button md-icon-button [md-menu-trigger-for]="notificationMenu">
-				<md-icon>notifications_none</md-icon>
+			<button mat-icon-button [mat-menu-trigger-for]="notificationMenu">
+				<mat-icon>notifications_none</mat-icon>
 			</button>
-			<md-menu x-position="before" #notificationMenu="mdMenu">
-				<button md-menu-item disabled>No Notifications</button>
-			</md-menu>
+			<mat-menu x-position="before" #notificationMenu="matMenu">
+				<button mat-menu-item disabled>No Notifications</button>
+			</mat-menu>
 
-			<button md-icon-button [md-menu-trigger-for]="settingsMenu">
-				<md-icon>settings_notifications</md-icon>
+			<button mat-icon-button [mat-menu-trigger-for]="settingsMenu">
+				<mat-icon>settings_notifications</mat-icon>
 			</button>
-			<md-menu x-position="before" #settingsMenu="mdMenu">
-				<button md-menu-item>Foo</button>
-				<button md-menu-item>Bar</button>
-				<button md-menu-item disabled>Baz</button>
-			</md-menu>
+			<mat-menu x-position="before" #settingsMenu="matMenu">
+				<button mat-menu-item>Foo</button>
+				<button mat-menu-item>Bar</button>
+				<button mat-menu-item disabled>Baz</button>
+			</mat-menu>
 		</span>
 
-		<button md-fab mdTooltip="View code on GitHub" mdTooltipPosition="before" (click)="openGitHubRepository()">
-			<md-icon>code</md-icon>
+		<button mat-fab matTooltip="View code on GitHub" matTooltipPosition="before" (click)="openGitHubRepository()">
+			<mat-icon>code</mat-icon>
 		</button>
-	</md-toolbar>
+	</mat-toolbar>
 
 	<div class="app-content">
 		<router-outlet></router-outlet>
 	</div>
-</md-sidenav-container>
+</mat-sidenav-container>

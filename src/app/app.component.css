@@ -1,4 +1,4 @@
-md-sidenav-container {
+mat-sidenav-container {
 	background: rgba(0,0,0,0.03);
 }
 
@@ -10,7 +10,7 @@ md-sidenav-container {
 	margin: 20px;
 }
 
-button[md-fab] {
+button[mat-fab] {
 	position: absolute;
 	right: 14px;
 	bottom: 14px;
@@ -18,7 +18,7 @@ button[md-fab] {
 }
 
 /*this rule can be activated for visual nesting*/
-/*:host >>> navigationitem > md-nav-list.level-2 > md-list-item > div::before {
+/*:host >>> navigationitem > mat-nav-list.level-2 > mat-list-item > div::before {
 	content: '-'
 }*/
 

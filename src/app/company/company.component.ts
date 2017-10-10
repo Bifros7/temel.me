@@ -1,6 +1,6 @@
 import { Component, Inject, ViewContainerRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MdDialog, MdDialogRef, MdSnackBar, MD_DIALOG_DATA } from '@angular/material';
+import { MatDialog, MatDialogRef, MatSnackBar, MAT_DIALOG_DATA } from '@angular/material';
 
 export interface IContact {
 	emailAddresses: Array<string>;
@@ -162,12 +162,12 @@ export class CompanyComponent {
 			},
 		],
 	}
-	public contactEditDialogRef: MdDialogRef<ContactEditDialog>;
-	public customerEditDialogRef: MdDialogRef<CustomerEditDialog>;
+	public contactEditDialogRef: MatDialogRef<ContactEditDialog>;
+	public customerEditDialogRef: MatDialogRef<CustomerEditDialog>;
 
 	public constructor(
-		private _dialog: MdDialog,
-		private _snackBar: MdSnackBar,
+		private _dialog: MatDialog,
+		private _snackBar: MatSnackBar,
 		private _viewContainerRef: ViewContainerRef
 	) { }
 
@@ -204,41 +204,41 @@ export class CompanyComponent {
 	selector: 'customer-edit-dialog',
 	template: `
 		<form [formGroup]="form" (ngSubmit)="dialogRef.close(form.value)">
-			<md-input-container class="full-width">
-				<input mdInput required placeholder="Name" formControlName="name">
-			</md-input-container>
-			<md-input-container class="full-width">
-				<input mdInput required placeholder="Phone" formControlName="phone">
-			</md-input-container>
-			<md-input-container class="full-width">
-				<input mdInput required placeholder="Fax" formControlName="fax">
-			</md-input-container>
-			<md-input-container class="full-width">
-				<input mdInput required placeholder="Website" formControlName="website">
-			</md-input-container>
-			<md-input-container class="full-width">
-				<input mdInput required placeholder="Town" formControlName="town">
-			</md-input-container>
-			<md-input-container class="full-width">
-				<input mdInput required placeholder="ZIP" formControlName="zipCode">
-			</md-input-container>
-			<md-input-container class="full-width">
-				<input mdInput required placeholder="Street" formControlName="street">
-			</md-input-container>
-			<md-select placeholder="Price Group" formControlName="priceGroup">
-				<md-option *ngFor="let priceGroup of priceGroups" [value]="priceGroup.value">
+			<mat-input-container class="full-width">
+				<input matInput required placeholder="Name" formControlName="name">
+			</mat-input-container>
+			<mat-input-container class="full-width">
+				<input matInput required placeholder="Phone" formControlName="phone">
+			</mat-input-container>
+			<mat-input-container class="full-width">
+				<input matInput required placeholder="Fax" formControlName="fax">
+			</mat-input-container>
+			<mat-input-container class="full-width">
+				<input matInput required placeholder="Website" formControlName="website">
+			</mat-input-container>
+			<mat-input-container class="full-width">
+				<input matInput required placeholder="Town" formControlName="town">
+			</mat-input-container>
+			<mat-input-container class="full-width">
+				<input matInput required placeholder="ZIP" formControlName="zipCode">
+			</mat-input-container>
+			<mat-input-container class="full-width">
+				<input matInput required placeholder="Street" formControlName="street">
+			</mat-input-container>
+			<mat-select placeholder="Price Group" formControlName="priceGroup">
+				<mat-option *ngFor="let priceGroup of priceGroups" [value]="priceGroup.value">
 					{{priceGroup.viewValue}}
-				</md-option>
-			</md-select>
-			<md-select placeholder="Group" formControlName="group">
-				<md-option *ngFor="let group of groups" [value]="group.value">
+				</mat-option>
+			</mat-select>
+			<mat-select placeholder="Group" formControlName="group">
+				<mat-option *ngFor="let group of groups" [value]="group.value">
 					{{group.viewValue}}
-				</md-option>
-			</md-select>
-			<md-dialog-actions>
-				<button md-button type="reset" (click)="dialogRef.close()">Close</button>
-				<button md-button type="submit">Save</button>
-			</md-dialog-actions>
+				</mat-option>
+			</mat-select>
+			<mat-dialog-actions>
+				<button mat-button type="reset" (click)="dialogRef.close()">Close</button>
+				<button mat-button type="submit">Save</button>
+			</mat-dialog-actions>
 		</form>
 	`,
 	styles: [
@@ -261,9 +261,9 @@ export class CustomerEditDialog {
 	];
 
 	constructor(
-		public dialogRef: MdDialogRef<CustomerEditDialog>,
+		public dialogRef: MatDialogRef<CustomerEditDialog>,
 		private _formBuilder: FormBuilder,
-		@Inject(MD_DIALOG_DATA) public customer: ICustomer
+		@Inject(MAT_DIALOG_DATA) public customer: ICustomer
 	) {
 		this.form = this._formBuilder.group({
 			accountManagers: [customer.accountManagers],
@@ -292,28 +292,28 @@ export class CustomerEditDialog {
 	selector: 'contact-edit-dialog',
 	template: `
 		<form [formGroup]="form" (ngSubmit)="dialogRef.close(form.value)">
-			<md-input-container class="full-width">
-				<input mdInput required placeholder="Name" formControlName="name">
-			</md-input-container>
-			<md-input-container class="full-width">
-				<input mdInput required placeholder="Phone" formControlName="phone">
-			</md-input-container>
-			<md-input-container class="full-width">
-				<input mdInput required placeholder="Fax" formControlName="fax">
-			</md-input-container>
-			<md-input-container class="full-width">
-				<input mdInput required placeholder="Town" formControlName="town">
-			</md-input-container>
-			<md-input-container class="full-width">
-				<input mdInput required placeholder="ZIP" formControlName="zipCode">
-			</md-input-container>
-			<md-input-container class="full-width">
-				<input mdInput required placeholder="Street" formControlName="street">
-			</md-input-container>
-			<md-dialog-actions>
-				<button md-button type="reset" (click)="dialogRef.close()">Close</button>
-				<button md-button type="submit">Save</button>
-			</md-dialog-actions>
+			<mat-input-container class="full-width">
+				<input matInput required placeholder="Name" formControlName="name">
+			</mat-input-container>
+			<mat-input-container class="full-width">
+				<input matInput required placeholder="Phone" formControlName="phone">
+			</mat-input-container>
+			<mat-input-container class="full-width">
+				<input matInput required placeholder="Fax" formControlName="fax">
+			</mat-input-container>
+			<mat-input-container class="full-width">
+				<input matInput required placeholder="Town" formControlName="town">
+			</mat-input-container>
+			<mat-input-container class="full-width">
+				<input matInput required placeholder="ZIP" formControlName="zipCode">
+			</mat-input-container>
+			<mat-input-container class="full-width">
+				<input matInput required placeholder="Street" formControlName="street">
+			</mat-input-container>
+			<mat-dialog-actions>
+				<button mat-button type="reset" (click)="dialogRef.close()">Close</button>
+				<button mat-button type="submit">Save</button>
+			</mat-dialog-actions>
 		</form>
 	`,
 	styles: [
@@ -324,9 +324,9 @@ export class ContactEditDialog {
 	public form: FormGroup;
 
 	constructor(
-		public dialogRef: MdDialogRef<ContactEditDialog>,
+		public dialogRef: MatDialogRef<ContactEditDialog>,
 		private _formBuilder: FormBuilder,
-		@Inject(MD_DIALOG_DATA) public contact: ICustomer
+		@Inject(MAT_DIALOG_DATA) public contact: ICustomer
 	) {
 		this.form = this._formBuilder.group({
 			emailAddresses: [contact.emailAddresses],

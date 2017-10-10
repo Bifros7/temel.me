@@ -4,10 +4,10 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
-import { routing, appRoutingProviders }  from './app.routing';
+import { routing, appRoutingProviders } from './app.routing';
 
 import { CompanyModule } from './company/company.module';
 import { ConwayModule } from './conway/conway.module';

@@ -1,18 +1,18 @@
-<md-card>
-	<md-card-content>
-		<md-tab-group>
-			<md-tab label="Announcements">
-				<md-list>
+<mat-card>
+	<mat-card-content>
+		<mat-tab-group>
+			<mat-tab label="Announcements">
+				<mat-list>
 					<div *ngIf="!announcements.length">No announcements have been posted yet.</div>
 					<div *ngFor="let announcement of announcements, let last = last">
 						<stadtanzeiger-announcement [announcement]="announcement"></stadtanzeiger-announcement>
-						<md-divider *ngIf="!last"></md-divider>
+						<mat-divider *ngIf="!last"></mat-divider>
 					</div>
-				</md-list>
-			</md-tab>
-			<md-tab label="New announcement">
+				</mat-list>
+			</mat-tab>
+			<mat-tab label="New announcement">
 				<stadtanzeiger-announcement-create (createAnnouncement)="createAnnouncement($event)"></stadtanzeiger-announcement-create>
-			</md-tab>
-		</md-tab-group>
-	</md-card-content>
-</md-card>
+			</mat-tab>
+		</mat-tab-group>
+	</mat-card-content>
+</mat-card>

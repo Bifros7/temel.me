@@ -1,15 +1,15 @@
-<md-divider *ngIf="!first && level === 1" class="faded"></md-divider>
-<md-nav-list [@showChildren]="childrenVisible" dense class="no-padding {{'level-' + level}}">
-	<md-list-item *ngIf="navigationitem.children.length > 0" (click)="toggle()">
-		<md-icon md-list-icon>{{navigationitem.icon}}</md-icon>
-		<span md-line>{{navigationitem.description}}</span>
-		<md-icon [@rotateArrow]="arrowDirection">keyboard_arrow_down</md-icon>
-	</md-list-item>
-	<md-list-item *ngIf="navigationitem.children.length === 0" (click)="linkClicked.emit(null)" [routerLink]="navigationitem.routerLink">
-		<md-icon md-list-icon>{{navigationitem.icon}}</md-icon>
-		<span md-line>{{navigationitem.description}}</span>
-	</md-list-item>
-</md-nav-list>
+<mat-divider *ngIf="!first && level === 1" class="faded"></mat-divider>
+<mat-nav-list [@showChildren]="childrenVisible" dense class="mat-nav-list no-padding {{'level-' + level}}">
+	<mat-list-item *ngIf="navigationitem.children.length > 0" (click)="toggle()">
+		<mat-icon mat-list-icon>{{navigationitem.icon}}</mat-icon>
+		<span mat-line>{{navigationitem.description}}</span>
+		<mat-icon [@rotateArrow]="arrowDirection">keyboard_arrow_down</mat-icon>
+	</mat-list-item>
+	<mat-list-item *ngIf="navigationitem.children.length === 0" (click)="linkClicked.emit(null)" [routerLink]="navigationitem.routerLink">
+		<mat-icon mat-list-icon>{{navigationitem.icon}}</mat-icon>
+		<span mat-line>{{navigationitem.description}}</span>
+	</mat-list-item>
+</mat-nav-list>
 <span *ngIf="childrenVisible">
 	<navigationitem *ngFor="let child of navigationitem.children" [navigationitem]="child" [level]="level + 1" (linkClicked)="linkClicked.emit(null)"></navigationitem>
 </span>

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
-import { MdSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
 	selector: 'stadtanzeiger-announcement-create',
@@ -15,7 +15,7 @@ export class StadtanzeigerAnnouncementCreateComponent {
 
 	constructor(
 		private _formBuilder: FormBuilder,
-		private _snackBar: MdSnackBar
+		private _snackBar: MatSnackBar
 	) {
 		this.form = this._formBuilder.group({
 			anonymous: [false],
