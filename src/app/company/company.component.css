@@ -11,18 +11,23 @@
 
 #contacts {
 	overflow-y: auto;
-	flex: 1;
+	flex: 1.5;
 	margin-left: 4px;
 }
 
 #details {
 	overflow-y: auto;
-	flex: 3;
+	flex: 2.5;
 	margin-left: 4px;
 }
 
 mat-divider {
+
 	margin: 7px 0px 8px 0px; /* 7px because the divider has border-top: 1px */
+}
+mat-panel-description {
+	display: inline;
+	text-align: right;
 }
 
 table {
@@ -50,8 +55,10 @@ td {
 td.label {
 	text-align: right;
 	font-weight: bold;
+	padding-right: 10px;
 }
 
 td.value {
 	text-align: left;
+	padding-left: 10px;
 }

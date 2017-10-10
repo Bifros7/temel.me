@@ -7,6 +7,7 @@ export interface IContact {
 	fax: string;
 	name: string;
 	phone: string;
+	revenue: number;
 	street: string;
 	town: string;
 	zipCode: number;
@@ -68,42 +69,7 @@ export class CompanyComponent {
 			fax: '',
 			name: 'Pascal Temel',
 			phone: '+49 172 1234567',
-			street: 'Foostraße 51',
-			town: 'Grafenau',
-			zipCode: 71120,
-		},
-		{
-			emailAddresses: [
-				'admin@temel.me',
-				'pascal@temel.me',
-			],
-			fax: '',
-			name: 'Pascal Temel',
-			phone: '+49 172 1234567',
-			street: 'Foostraße 51',
-			town: 'Grafenau',
-			zipCode: 71120,
-		},
-		{
-			emailAddresses: [
-				'admin@temel.me',
-				'pascal@temel.me',
-			],
-			fax: '',
-			name: 'Pascal Temel',
-			phone: '+49 172 1234567',
-			street: 'Foostraße 51',
-			town: 'Grafenau',
-			zipCode: 71120,
-		},
-		{
-			emailAddresses: [
-				'admin@temel.me',
-				'pascal@temel.me',
-			],
-			fax: '',
-			name: 'Pascal Temel',
-			phone: '+49 172 1234567',
+			revenue: 25122.12,
 			street: 'Foostraße 51',
 			town: 'Grafenau',
 			zipCode: 71120,
@@ -161,15 +127,16 @@ export class CompanyComponent {
 				sales: 90852.198
 			},
 		],
-	}
+	};
 	public contactEditDialogRef: MatDialogRef<ContactEditDialog>;
 	public customerEditDialogRef: MatDialogRef<CustomerEditDialog>;
+	public openContact: number;
 
 	public constructor(
 		private _dialog: MatDialog,
 		private _snackBar: MatSnackBar,
 		private _viewContainerRef: ViewContainerRef
-	) { }
+	) { for (let i = 1; i < 20; i++) { this.contacts.push(this.contacts[0]); } }
 
 	public editCustomer(): void {
 		this.customerEditDialogRef = this._dialog.open(CustomerEditDialog, { data: this.customer, width: '600px' });

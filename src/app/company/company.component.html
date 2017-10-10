@@ -115,54 +115,56 @@
 	<mat-card id="contacts">
 		<mat-card-title>Contacts</mat-card-title>
 		<mat-card-content>
-			<div *ngFor="let contact of contacts, let i = index, let last = last">
-				<mat-card>
-					<mat-card-title>{{contact.name}}</mat-card-title>
-					<mat-card-content>
-						<table>
-							<tr matTooltip="Phone: {{contact.phone}}">
-								<td class="label">Phone</td>
-								<td class="value">{{contact.phone}}</td>
-							</tr>
-							<tr matTooltip="Fax: {{contact.fax}}">
-								<td class="label">Fax</td>
-								<td class="value">{{contact.fax}}</td>
-							</tr>
-						</table>
-						<mat-divider class="faded"></mat-divider>
-						<table>
-							<tr>
-								<td class="label">E-Mail addresses</td>
-								<td class="value">
-									<span *ngFor="let emailAddress of contact.emailAddresses, let last = last"  matTooltip="{{emailAddress}}">
-										{{emailAddress}}
-										<br *ngIf="!last">
-									</span>
-								</td>
-							</tr>
-						</table>
-						<mat-divider class="faded"></mat-divider>
-						<table>
-							<tr matTooltip="Town: {{contact.town}}">
-								<td class="label">Town</td>
-								<td class="value">{{contact.town}}</td>
-							</tr>
-							<tr matTooltip="ZIP: {{contact.zipCode}}">
-								<td class="label">ZIP</td>
-								<td class="value">{{contact.zipCode}}</td>
-							</tr>
-							<tr matTooltip="Street: {{contact.street}}">
-								<td class="label">Street</td>
-								<td class="value">{{contact.street}}</td>
-							</tr>
-						</table>
-					</mat-card-content>
-					<mat-card-actions>
-						<button mat-button (click)="editContact(i)" [disabled]="contactEditDialogRef">EDIT</button>
-					</mat-card-actions>
-				</mat-card>
-				<br *ngIf=!last>
-			</div>
+			<mat-accordion class="example-headers-align">
+				<mat-expansion-panel *ngFor="let contact of contacts, let i = index, let last = last" [expanded]="openContact === i" (opened)="openContact = i">
+					<mat-expansion-panel-header>
+						<mat-panel-title>
+							{{contact.name}}
+						</mat-panel-title>
+						<mat-panel-description matTooltip="Umsatz: {{contact.revenue | currency:'EUR':true}}">
+							{{contact.revenue | currency:'EUR':true}}
+						</mat-panel-description>
+					</mat-expansion-panel-header>
+
+					<table>
+						<tr matTooltip="Phone: {{contact.phone}}">
+							<td class="label">Phone</td>
+							<td class="value">{{contact.phone}}</td>
+						</tr>
+						<tr matTooltip="Fax: {{contact.fax}}">
+							<td class="label">Fax</td>
+							<td class="value">{{contact.fax}}</td>
+						</tr>
+					</table>
+					<mat-divider class="faded"></mat-divider>
+					<table>
+						<tr>
+							<td class="label">E-Mail addresses</td>
+							<td class="value">
+								<span *ngFor="let emailAddress of contact.emailAddresses, let last = last"  matTooltip="{{emailAddress}}">
+									{{emailAddress}}
+									<br *ngIf="!last">
+								</span>
+							</td>
+						</tr>
+					</table>
+					<mat-divider class="faded"></mat-divider>
+					<table>
+						<tr matTooltip="Town: {{contact.town}}">
+							<td class="label">Town</td>
+							<td class="value">{{contact.town}}</td>
+						</tr>
+						<tr matTooltip="ZIP: {{contact.zipCode}}">
+							<td class="label">ZIP</td>
+							<td class="value">{{contact.zipCode}}</td>
+						</tr>
+						<tr matTooltip="Street: {{contact.street}}">
+							<td class="label">Street</td>
+							<td class="value">{{contact.street}}</td>
+						</tr>
+					</table>
+				</mat-expansion-panel>
+			</mat-accordion>
 		</mat-card-content>
 	</mat-card>
 	<mat-card id="details">
